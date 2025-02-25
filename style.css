@@ -884,3 +884,29 @@ contact-info p {
         justify-content: center;
     }
 }
+
+.wide-card {
+    grid-column: span 2; /* Fa occupare due colonne alla card */
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.wide-card .skill-icon,
+.wide-card h3,
+.wide-card .skill-tags span {
+    color: white;
+}
+
+.wide-card .skill-tags span {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.wide-card .skill-tags span:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .wide-card {
+        grid-column: span 1; /* Su mobile occupa una sola colonna */
+    }
+}
