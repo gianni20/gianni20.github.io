@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Giovanni Romano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">GR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tec">Tecnologie</a></li>
+                <li><a href="#sum">Caratteristiche</a></li>
+                <li><a href="#screen">Screenshoot</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="project-details">
+        <div class="project-header">
+            <h1>Library Management</h1>
+            <p>Sistema di gestione biblioteca con React e Django</p>
+        </div>
+
+        <div class="project-preview">
+            <video controls width="100%">
+                <source src="media/library/Library.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+
+        <div class="project-description" id="intro">
+            <h2>Il Progetto</h2>
+            <p>Un sistema completo per la gestione di una biblioteca, che include funzionalità per il prestito di libri, la gestione degli utenti e il monitoraggio delle disponibilità.</p>
+        </div>
+
+        <div class="technologies" id="tec">
+            <h2>Tecnologie Utilizzate</h2>
+            <ul>
+                <li>React</li>
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>REST API</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+
+        <div class="features" id="sum">
+            <h2>Caratteristiche Principali</h2>
+            <ul>
+                <li>Gestione prestiti e restituzioni</li>
+                <li>Sistema di autenticazione utenti</li>
+                <li>Dashboard amministrativa</li>
+                <li>Ricerca avanzata libri</li>
+                <li>Notifiche automatiche</li>
+            </ul>
+        </div>
+
+        <div class="screenshots" id="screen">
+            <h2>Screenshot</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <img src="media/library/home.png" alt="Library Management Homepage">
+                </div>
+                <div class="screenshot">
+                    <img src="media/library/fullbook.png" alt="Book Details">
+                </div>
+                <div class="screenshot">
+                    <img src="media/library/profile.png" alt="User Profile">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-links" id="links">
+            <a href="https://github.com/gianni20/Library_Managment" target="_blank">
+                <i class="fab fa-github"></i> Codice Sorgente
+            </a>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+</html>
