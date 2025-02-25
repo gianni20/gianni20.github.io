@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prova</title>
+    <title>Giovanni Romano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Prova</h1>
-    <p>Prova di git</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="#skills">Competenze</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="profile-container">
+                <img src="tua-foto.jpg" alt="Gianni" class="profile-img">
+                <h1>Giovanni Romano</h1>
+                <h3>He/Him - <script> document.write(new Date().getFullYear() - 2005);</script> anni</h3>
+                <p class="title">Sviluppatore Software</p>
+                <p class="bio">
+                    Sono uno studente appassionato di programmazione e tecnologia. 
+                    Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
+                    Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, sia attraverso il backend che nel frontend. 
+                    Mi interessa anche il mondo dell’intelligenza artificiale, del design e dell’ottimizzazione del codice. 
+                    Oltre a sviluppare software, mi piace sperimentare con server Linux e trovare modi innovativi per integrare 
+                    tecnologia e automazione nella vita quotidiana.
+                </p>
+            </div>
+        </section>
+
+        <section id="progetti">
+            <h2>I Miei Progetti</h2>
+            <div class="progetti-grid">
+                <div class="progetto-card">
+                    <h3>Nome Progetto 1</h3>
+                    <p>Descrizione del progetto</p>
+                    <div class="tecnologie">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="link-github" class="btn">Vedi su GitHub</a>
+                </div>
+                <!-- Aggiungi altre card progetto qui -->
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Competenze</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Node.js</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <div class="social-links">
+                <a href="https://github.com/gianni_romano05"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/tuoprofilo"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:gianniromano2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Il Tuo Nome - Portfolio</p>
+    </footer>
 </body>
 </html>

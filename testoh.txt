@@ -1,0 +1,7 @@
+Sono uno studente appassionato di programmazione e tecnologia. 
+                    Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
+                    Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, sia attraverso il backend che nel frontend. 
+                    Mi interessa anche il mondo dell’intelligenza artificiale, del design e dell’ottimizzazione del codice. 
+                    Oltre a sviluppare software, mi piace sperimentare con server Linux e trovare modi innovativi per integrare 
+                    tecnologia e automazione nella vita quotidiana.
+                    
