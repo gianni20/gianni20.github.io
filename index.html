@@ -3,91 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Romano</title>
+    <meta name="description" content="Portfolio di Giovanni Romano - Sviluppatore Software">
+    <meta name="keywords" content="sviluppatore, software, web development, frontend, backend, Python, JavaScript">
+    <meta name="author" content="Giovanni Romano">
+    <meta property="og:title" content="Giovanni Romano - Portfolio">
+    <meta property="og:description" content="Portfolio personale di Giovanni Romano, sviluppatore software">
+    <meta property="og:image" content="tua-foto.jpg">
+    <title>Giovanni Romano | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="carousel.js" defer></script>
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">GR</a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#progetti">Progetti</a></li>
                 <li><a href="#skills">Competenze</a></li>
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
 
     <main>
         <section id="home">
             <div class="profile-container">
-                <img src="tua-foto.jpg" alt="Gianni" class="profile-img">
-                <h1>Giovanni Romano</h1>
-                <h3>He/Him - <script> document.write(new Date().getFullYear() - 2005);</script> anni</h3>
-                <p class="title">Sviluppatore Software</p>
-                <p class="bio">
-                    Sono uno studente appassionato di programmazione e tecnologia. 
-                    Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
-                    Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, sia attraverso il backend che nel frontend. 
-                    Mi interessa anche il mondo dell’intelligenza artificiale, del design e dell’ottimizzazione del codice. 
-                    Oltre a sviluppare software, mi piace sperimentare con server Linux e trovare modi innovativi per integrare 
-                    tecnologia e automazione nella vita quotidiana.
-                </p>
+                <div class="profile-header">
+                    <img src="media/image.png" alt="Gianni" class="profile-img">
+                    <div class="profile-info">
+                        <h1>Giovanni Romano</h1>
+                        <h3>He/Him - <script>document.write(new Date().getFullYear() - 2005);</script> anni</h3>
+                        <p class="title">Sviluppatore Software</p>
+                        <div class="profile-tags">
+                            <span>Web Development</span>
+                            <span>App Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio-container">
+                    <p class="bio">
+                        Sono uno studente appassionato di programmazione e tecnologia. 
+                        Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
+                        Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, sia attraverso il backend che nel frontend. 
+                        Mi interessa anche il mondo dell'intelligenza artificiale, del design e dell'ottimizzazione del codice. 
+                        Oltre a sviluppare software, mi piace sperimentare con server Linux e trovare modi innovativi per integrare 
+                        tecnologia e automazione nella vita quotidiana.
+                    </p>
+                </div>
             </div>
         </section>
 
         <section id="progetti">
-            <h2>I Miei Progetti</h2>
-            <div class="progetti-grid">
-                <div class="progetto-card">
-                    <h3>Nome Progetto 1</h3>
-                    <p>Descrizione del progetto</p>
-                    <div class="tecnologie">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+            <h2 style="margin: 0;">I Miei Progetti</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="progetti-carousel">
+                    <!-- Card Progetto 1 - Verde -->
+                    <div class="progetto-card" data-color="#4cd964">
+                        <div class="project-image">
+                            <img src="path/to/project1.jpg" alt="Progetto 1">
+                        </div>
+                        <h3>Nome Progetto</h3>
+                        <p class="project-subtitle">React, Node.js</p>
+                        <a href="WIP.html" class="info-btn">Maggiori Informazioni</a>
                     </div>
-                    <a href="link-github" class="btn">Vedi su GitHub</a>
+
+                    <!-- Card Progetto 2 - Blu -->
+                    <div class="progetto-card" data-color="#007AFF">
+                        <div class="project-image">
+                            <img src="path/to/project2.jpg" alt="Progetto 2">
+                        </div>
+                        <h3>Nome Progetto</h3>
+                        <p class="project-subtitle">Python, Django</p>
+                        <a href="WIP.html" class="info-btn">Maggiori Informazioni</a>
+                    </div>
+
+                    <!-- Card Progetto 3 - Viola -->
+                    <div class="progetto-card" data-color="#AF52DE">
+                        <div class="project-image">
+                            <img src="path/to/project3.jpg" alt="Progetto 3">
+                        </div>
+                        <h3>Nome Progetto</h3>
+                        <p class="project-subtitle">JavaScript, Vue.js</p>
+                        <a href="WIP.html" class="info-btn">Maggiori Informazioni</a>
+                    </div>
                 </div>
-                <!-- Aggiungi altre card progetto qui -->
+
+                <button class="carousel-button next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
         <section id="skills">
             <h2>Competenze</h2>
             <div class="skills-container">
-                <div class="skill-category">
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Streamlit</span>
+                        <span>Flutter</span>
+                    </div>
                 </div>
-                <div class="skill-category">
+
+                <!-- Backend -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
                     <h3>Backend</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Node.js</li>
-                        <li>SQL</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span>Postgres</span>
+                        <span>Node.js</span>
+                        <span>Django</span>
+                        <span>Pandas / Numpy</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Linguaggi</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Java / EE</span>
+                        <span>C</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Strumenti</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>VS Code</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>Figma</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contatti">
             <h2>Contatti</h2>
-            <div class="social-links">
-                <a href="https://github.com/gianni_romano05"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/tuoprofilo"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:gianniromano2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="contacts-container">
+                <div class="contact-info">
+                    <p>Vuoi collaborare o hai domande? Contattami!</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/gianni20" class="social-link github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/giovanniromano20/" class="social-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:gianniromano2005@gmail.com" class="social-link email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.instagram.com/gianni_romano05" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Il Tuo Nome - Portfolio</p>
+        <p>&copy; 2024 Giovanni Romano - Portfolio</p>
     </footer>
+    <script src="animations.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>
