@@ -38,9 +38,8 @@
 
 .dark-theme .progetto-card:hover {
     box-shadow: 
-        10px 10px 30px var(--card-color),
-        -10px 10px 30px var(--card-color);
-    filter: brightness(1.5); /* Aumentiamo ancora di più la luminosità in modalità scura */
+        10px 10px 40px var(--card-color),
+        -10px 10px 40px var(--card-color);
 }
 
 .dark-theme .social-links a {
@@ -330,7 +329,7 @@ section h2 {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px var(--shadow-color);
-    transition: all 0.5s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     --card-color: #4cd964; /* Colore di default */
 }
 
@@ -339,8 +338,7 @@ section h2 {
     box-shadow: 
         10px 10px 30px var(--card-color),
         -10px 10px 30px var(--card-color);
-    /* Aumentiamo l'intensità dell'ombra per la modalità scura */
-    filter: brightness(1.2);
+    /* Rimuoviamo il filter: brightness per evitare lo schiarimento */
 }
 
 .skills-container {
@@ -636,7 +634,6 @@ section#progetti {
     background: var(--card-bg);
     border-radius: 20px;
     padding: 2rem;
-    /* Aggiungiamo margin laterale per l'ombra */
     margin: 1rem 2rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
@@ -650,8 +647,6 @@ section#progetti {
     box-shadow: 
         10px 10px 30px var(--card-color),
         -10px 10px 30px var(--card-color);
-    /* Aumentiamo l'intensità dell'ombra per la modalità scura */
-    filter: brightness(1.2);
 }
 
 .project-image {
@@ -669,7 +664,7 @@ section#progetti {
 }
 
 .progetto-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .progetto-card h3 {
@@ -680,14 +675,33 @@ section#progetti {
 }
 
 .project-subtitle {
-    padding: 0 1.5rem;
-    color: var(--secondary-color);
-    font-size: 1rem;
-    margin-bottom: auto;
+    display: none;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.project-tags span {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-tags span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .info-btn {
-    margin: 1.5rem;
+    margin: 1.5rem auto; /* Cambiato da 1.5rem a 1.5rem auto */
     padding: 0.8rem 1.5rem;
     background-color: var(--primary-color);
     color: white;
@@ -696,8 +710,10 @@ section#progetti {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    text-decoration: none; /* Aggiunto per rimuovere la sottolineatura del link */
-    display: inline-block; /* Aggiunto per mantenere il comportamento del pulsante */
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content; /* Aggiunto per adattare la larghezza al contenuto */
+    align-self: center; /* Aggiunto per centrare il pulsante */
 }
 
 .info-btn:hover {
