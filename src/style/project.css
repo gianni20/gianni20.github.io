@@ -124,37 +124,33 @@
 }
 
 .screenshot {
-    margin-bottom: 2rem;
-    border-radius: 15px;
+    flex: 0 0 calc(50% - 1rem);
+    position: relative;
     overflow: hidden;
     box-shadow: 0 4px 8px var(--shadow-color);
+    border-radius: 12px;
     transition: transform 0.3s ease;
-    width: 100%; /* Usa tutta la larghezza disponibile nella cella */
+    height: fit-content; /* Si adatta all'altezza del contenuto */
+}
+
+.screenshot img {
+    width: 100%;
     height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
 }
 
 .screenshot:hover {
     transform: translateY(-5px);
 }
 
-.screenshot img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
 .screenshots-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Forza 2 colonne di uguale larghezza */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 0 2rem;
-}
-
-/* Lo screenshot principale occupa tutta la larghezza */
-.screenshot:first-child {
-    grid-column: 1 / -1;
 }
 
 .project-header p {
