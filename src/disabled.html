@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzionalità non disponibile - Giovanni Romano</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .disabled-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .disabled-icon {
+            font-size: 5rem;
+            color: #ff6b6b;
+            margin-bottom: 2rem;
+            animation: shake 0.5s ease-in-out infinite;
+        }
+
+        .disabled-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .disabled-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            max-width: 600px;
+        }
+
+        .back-button {
+            padding: 1rem 2rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="disabled-container">
+        <i class="fas fa-lock disabled-icon"></i>
+        <h1 class="disabled-title">Link non disponibile</h1>
+        <p class="disabled-text">
+            Questo link non è ancora disponibile.
+            Ci sarà una ragione! Se hai bisogno di assistenza, contattami.
+        </p>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-house"></i> Torna nella home
+        </a>
+    </div>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>

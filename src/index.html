@@ -10,9 +10,9 @@
     <meta property="og:description" content="Portfolio personale di Giovanni Romano, sviluppatore software">
     <meta property="og:image" content="tua-foto.jpg">
     <title>Giovanni Romano | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="carousel.js" defer></script>
+    <script src="js/carousel.js" defer></script>
 </head>
 <body>
     <div id="loader-wrapper">
@@ -39,7 +39,7 @@
         <section id="home">
             <div class="profile-container">
                 <div class="profile-header">
-                    <img src="media/image.png" alt="Gianni" class="profile-img">
+                    <img src="../media/io/image.png" alt="Gianni" class="profile-img">
                     <div class="profile-info">
                         <h1>Giovanni Romano</h1>
                         <h3>He/Him - <script>document.write(new Date().getFullYear() - 2005);</script> anni</h3>
@@ -71,9 +71,10 @@
                 </button>
                 
                 <div class="progetti-carousel">
+                    <!-- Library -->
                     <div class="progetto-card" data-color="#f4ab8e">
                         <div class="project-image">
-                            <img src="media/library/homelittle.PNG" alt="Progetto 1">
+                            <img src="../media/library/homelittle.PNG" alt="Library Management">
                         </div>
                         <h3>Library managment</h3>
                         <div class="project-tags">
@@ -84,6 +85,7 @@
                         <a href="library.html" class="info-btn">Maggiori Informazioni</a>
                     </div>
 
+                    <!-- ITET -->
                     <div class="progetto-card" data-color="#AF52DE">
                         <div class="project-image">
                             <img src="path/to/project2.jpg" alt="Progetto 2">
@@ -94,7 +96,7 @@
                             <span>Flutter</span>
                             <span>Firebase</span>
                         </div>
-                        <a href="WIP.html" class="info-btn">Maggiori Informazioni</a>
+                        <a href="itet.html" class="info-btn">Maggiori Informazioni</a>
                     </div>
 
                     <div class="progetto-card" data-color="#67f352">
@@ -232,7 +234,7 @@
     <footer>
         <p>&copy; 2024 Giovanni Romano - Portfolio</p>
     </footer>
-    <script src="animations.js"></script>
-    <script src="theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
