@@ -129,6 +129,8 @@
     overflow: hidden;
     box-shadow: 0 4px 8px var(--shadow-color);
     transition: transform 0.3s ease;
+    width: 100%; /* Usa tutta la larghezza disponibile nella cella */
+    height: auto;
 }
 
 .screenshot:hover {
@@ -139,11 +141,13 @@
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Forza 2 colonne di uguale larghezza */
     gap: 2rem;
     padding: 0 2rem;
 }
