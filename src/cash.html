@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Hive - Giovanni Romano</title>
+    
+    <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tec">Tecnologie</a></li>
+                <li><a href="#sum">Caratteristiche</a></li>
+                <li><a href="#screen">Screenshots</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="project-details">
+        <!-- 1. INTESTAZIONE DEL PROGETTO -->
+        <div class="project-header">
+            <h1>Cash Hive</h1>
+            <br>
+            <p>E-wallet Web Application</p>
+        </div>
+
+        <!-- 2. ANTEPRIMA PRINCIPALE -->
+        <div class="project-preview">
+            <img src="../media/cashhive/0.png" alt="Anteprima Dashboard Cash Hive">
+        </div>
+
+        <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
+        <div class="project-description" id="intro">
+            <h2>Il Progetto</h2>
+            <p>
+                Cash Hive è un'applicazione web e-wallet completa, progettata per simulare la gestione delle finanze personali in modo sicuro e interattivo. L'applicazione consente agli utenti di monitorare i propri conti correnti, organizzare risparmi e inviare denaro in modo istantaneo.
+            </p>
+            <p>
+                Sviluppata con un'architettura Enterprise basata su <strong>Jakarta EE</strong> e un frontend guidato da <strong>PrimeFaces</strong>, l'applicazione integra elevati standard di sicurezza, come l'autenticazione a due fattori (2FA) e crittografia per la protezione delle transazioni memorizzate nel database <strong>PostgreSQL</strong>.
+            </p>
+        </div>
+
+        <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
+        <div class="technologies" id="tec">
+            <h2>Tecnologie Utilizzate</h2>
+            <ul>
+                <li>Jakarta EE</li>
+                <li>PrimeFaces</li>
+                <li>PostgreSQL</li>
+                <li>Maven</li>
+                <li>Google Authenticator API</li>
+            </ul>
+        </div>
+
+        <!-- 5. CARATTERISTICHE PRINCIPALI -->
+        <div class="features" id="sum">
+            <h2>Caratteristiche Principali</h2>
+            <ul>
+                <li>Registrazione sicura ed estratti conto in tempo reale</li>
+                <li>Autenticazione a due fattori (2FA) con Google Authenticator</li>
+                <li>Simulazione di deposito, prelievo e trasferimento fondi</li>
+                <li>Salvadanaio virtuale per obiettivi di risparmio dedicati</li>
+                <li>Gestione contatti, reti di amicizia e impostazione budget mensili</li>
+            </ul>
+        </div>
+
+        <!-- 6. GALLERIA SCREENSHOTS -->
+        <div class="screenshots" id="screen">
+            <h2>Screenshot Applicazione</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine1.png" alt="Dashboard Principale">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine2.png" alt="Schermata di login">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine3.png" alt="Schermata di registrazione">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine4.png" alt="Attivazione Autenticazione 2FA">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine5.png" alt="Verifica codice OTP 2FA">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine6.png" alt="Gestione salvadanai di risparmio">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine7.png" alt="Inserimento fondi nel salvadanaio">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine8.png" alt="Gestione contatti e reti di amici">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine9.png" alt="Aggiunta nuovo amico via email">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine10.png" alt="Impostazione budget e limiti di spesa">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine11.png" alt="Simulazione trasferimento di denaro">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine12.png" alt="Simulazione ricariche e prelievi">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/cashhive/Immagine13.png" alt="Lista delle transazioni effettuate">
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. COLLEGAMENTI ESTERNI (Call to Action) -->
+        <div class="project-links" id="links">
+            <a href="disabled.html">
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
+            </a>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>

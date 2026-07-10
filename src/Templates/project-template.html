@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <script>
-        // Gestione immediata del tema per evitare flash bianchi
         if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark-theme');
         } else {
@@ -23,7 +22,6 @@
     </script>
 </head>
 <body>
-    <!-- Navbar superiore di navigazione -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -137,7 +135,6 @@
         </div>
     </main>
 
-    <!-- Script per la gestione del tema -->
     <script src="js/theme.js"></script>
 </body>
 </html>
