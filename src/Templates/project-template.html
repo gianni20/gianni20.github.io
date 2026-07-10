@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- COMPILA: Cambia il titolo della pagina inserendo il nome del tuo progetto -->
+    <title>Nome Progetto - Giovanni Romano</title>
+    
+    <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        // Gestione immediata del tema per evitare flash bianchi
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar superiore di navigazione -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tec">Tecnologie</a></li>
+                <li><a href="#sum">Caratteristiche</a></li>
+                <li><a href="#screen">Screenshots</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="project-details">
+        <!-- 1. INTESTAZIONE DEL PROGETTO -->
+        <div class="project-header">
+            <!-- COMPILA: Inserisci il nome del progetto -->
+            <h1>Nome Progetto</h1>
+            <br>
+            <!-- COMPILA: Inserisci una breve descrizione o tipologia (es. App Mobile, Piattaforma Web) -->
+            <p>Tipologia o Sottotitolo Breve del Progetto</p>
+        </div>
+
+        <!-- 2. ANTEPRIMA PRINCIPALE (Video o Immagine) -->
+        <div class="project-preview">
+            <!-- OPZIONE A: Se hai un video di presentazione (Rimuovi i commenti <!-- per attivare) -->
+            <!--
+            <video controls width="100%">
+                <source src="../media/percorso/video.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+            -->
+
+            <!-- OPZIONE B: Se hai un'immagine grande come anteprima principale (Rimuovi il commento sotto se usi questo) -->
+            <img src="https://placehold.co/1000x500/090d16/ffffff?text=Anteprima+Progetto" alt="Anteprima del progetto">
+        </div>
+
+        <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
+        <div class="project-description" id="intro">
+            <h2>Il Progetto</h2>
+            <!-- COMPILA: Scrivi i paragrafi descrittivi del tuo progetto -->
+            <p>
+                Inserisci qui un paragrafo che descriva gli obiettivi del progetto, il contesto in cui è stato sviluppato (es. progetto scolastico, lavoro personale, hackathon) e il problema che risolve.
+            </p>
+            <p>
+                Puoi aggiungere un secondo paragrafo per approfondire le scelte architetturali, sfide particolari riscontrate o dettagli organizzativi del lavoro.
+            </p>
+        </div>
+
+        <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
+        <div class="technologies" id="tec">
+            <h2>Tecnologie Utilizzate</h2>
+            <ul>
+                <!-- COMPILA: Aggiungi o rimuovi le voci della lista in base al tuo stack -->
+                <li>Tecnologia 1</li>
+                <li>Tecnologia 2</li>
+                <li>Linguaggio/Framework</li>
+                <li>Database</li>
+                <li>Strumento di Design</li>
+            </ul>
+        </div>
+
+        <!-- 5. CARATTERISTICHE PRINCIPALI (Griglia di punti di forza) -->
+        <div class="features" id="sum">
+            <h2>Caratteristiche Principali</h2>
+            <ul>
+                <!-- COMPILA: Elenca le funzionalità chiave (verranno mostrate con una spunta verde) -->
+                <li>Funzionalità 1 (es. Autenticazione sicura OAuth)</li>
+                <li>Funzionalità 2 (es. Interfaccia responsiva mobile-first)</li>
+                <li>Funzionalità 3 (es. Esportazione dati in PDF/CSV)</li>
+                <li>Funzionalità 4 (es. Notifiche push in tempo reale)</li>
+            </ul>
+        </div>
+
+        <!-- 6. GALLERIA SCREENSHOTS -->
+        <div class="screenshots" id="screen">
+            <h2>Screenshot</h2>
+            <div class="screenshots-grid">
+                <!-- COMPILA: Inserisci i percorsi dei tuoi screenshot. La griglia si adatta in modo responsivo. -->
+                <div class="screenshot">
+                    <img src="https://placehold.co/600x400/090d16/ffffff?text=Screenshot+1" alt="Descrizione Screenshot 1">
+                </div>
+                <div class="screenshot">
+                    <img src="https://placehold.co/600x400/090d16/ffffff?text=Screenshot+2" alt="Descrizione Screenshot 2">
+                </div>
+                <div class="screenshot">
+                    <img src="https://placehold.co/600x400/090d16/ffffff?text=Screenshot+3" alt="Descrizione Screenshot 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. COLLEGAMENTI ESTERNI (Call to Action) -->
+        <div class="project-links" id="links">
+            <!-- COMPILA: Imposta i link ai tuoi repository o alle demo attive -->
+            <!-- Esempio link GitHub -->
+            <a href="https://github.com/tuo-username/tuo-repo" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
+            </a>
+            
+            <!-- Esempio link Demo Live (Rimuovi il commento se vuoi usarlo) -->
+            <!--
+            <a href="https://tua-demo-live.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo Live
+            </a>
+            -->
+        </div>
+    </main>
+
+    <!-- Script per la gestione del tema -->
+    <script src="js/theme.js"></script>
+</body>
+</html>

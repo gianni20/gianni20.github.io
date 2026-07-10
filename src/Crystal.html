@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- COMPILA: Cambia il titolo della pagina inserendo il nome del tuo progetto -->
+    <title>Crystals of the Soul - Giovanni Romano</title>
+    
+    <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        // Gestione immediata del tema per evitare flash bianchi
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar superiore di navigazione -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tec">Tecnologie</a></li>
+                <li><a href="#sum">Caratteristiche</a></li>
+                <li><a href="#screen">Screenshots</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="project-details">
+        <!-- 1. INTESTAZIONE DEL PROGETTO -->
+        <div class="project-header">
+            <h1>Crystals of the Soul</h1>
+            <br>
+            <p>Gioco di ruolo dungeon crawler a sfondo morale</p>
+        </div>
+
+        <!-- 2. ANTEPRIMA PRINCIPALE (Video o Immagine) -->
+        <div class="project-preview">
+            <img src="../media/Crystals/green_environment.png" alt="Anteprima del progetto">
+        </div>
+
+        <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
+        <div class="project-description" id="intro">
+            <h2>Il Progetto</h2>
+            <p>
+                Crystals of the Soul è un gioco di ruolo a turni con visuale dall'alto in cui il giocatore scende attraverso un dungeon di sei piani (un piano tutorial + 5 piani di gioco effettivo).
+            </p> 
+            <p> 
+                Ogni incontro offre una scelta morale: uccidere il nemico o risparmiarlo. 
+                Il gioco tiene un conteggio morale progressivo, e questo conteggio determina silenziosamente lo svolgimento della storia.
+            </p>
+        </div>
+
+        <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
+        <div class="technologies" id="tec">
+            <h2>Tecnologie Utilizzate</h2>
+            <ul>
+                <!-- COMPILA: Aggiungi o rimuovi le voci della lista in base al tuo stack -->
+                <li>Java</li>
+                <li>LibGDX</li>
+                <li>Gradle</li>
+                <li>Tiled</li>
+            </ul>
+        </div>
+
+        <!-- 5. CARATTERISTICHE PRINCIPALI -->
+        <div class="features" id="sum">
+            <h2>Caratteristiche Principali</h2>
+            <ul>
+                <li>Dungeon di 6 piani (1 livello tutorial + 5 livelli di gioco)</li>
+                <li>Scelte morali negli incontri (uccidere o risparmiare i nemici)</li>
+                <li>Sviluppo silenzioso della trama in base al conteggio morale</li>
+                <li>Sistema di combattimento strategico a turni</li>
+                <li>Visuale dall'alto (Top-Down) con esplorazione 2D</li>
+            </ul>
+        </div>
+
+        <!-- 6. GALLERIA SCREENSHOTS -->
+        <div class="screenshots" id="screen">
+            <h2>Screenshot</h2>
+            <div class="screenshots-grid">
+                <!-- COMPILA: Inserisci i percorsi dei tuoi screenshot. La griglia si adatta in modo responsivo. -->
+                <div class="screenshot">
+                    <img src="../media/Crystals/battle_ui.png" alt="Descrizione Screenshot 1">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/Crystals/green_crystal_assigned.png" alt="Descrizione Screenshot 2">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/Crystals/green_environment.png" alt="Descrizione Screenshot 3">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/Crystals/logo.png" alt="Descrizione Screenshot 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. COLLEGAMENTI ESTERNI (Call to Action) -->
+        <div class="project-links" id="links">
+            <!-- COMPILA: Imposta i link ai tuoi repository o alle demo attive -->
+            <!-- Esempio link GitHub -->
+            <a href="https://github.com/arcamauro/Crystals-of-the-Soul" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
+            </a>
+            
+            <!-- Esempio link Demo Live (Rimuovi il commento se vuoi usarlo) -->
+            <!--
+            <a href="https://tua-demo-live.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo Live
+            </a>
+            -->
+        </div>
+    </main>
+
+    <!-- Script per la gestione del tema -->
+    <script src="js/theme.js"></script>
+</body>
+</html>
