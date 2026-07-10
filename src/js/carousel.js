@@ -1,16 +1,25 @@
+// Carousel helper script (safely bypassed if grid view is active)
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.progetti-carousel');
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
-    let currentIndex = 0;
     const cards = document.querySelectorAll('.progetto-card');
-    const totalCards = cards.length;
-
-    // Gestione colori delle card
+    
+    // Configura i colori dinamici delle card se presenti
     cards.forEach(card => {
         const color = card.getAttribute('data-color');
-        card.style.setProperty('--card-color', color);
+        if (color) {
+            card.style.setProperty('--card-color', color);
+        }
     });
+
+    // Se non ci sono elementi per il carosello, esci senza errori
+    if (!carousel || !prevButton || !nextButton) {
+        return;
+    }
+
+    let currentIndex = 0;
+    const totalCards = cards.length;
 
     function updateButtons() {
         prevButton.disabled = currentIndex === 0;
@@ -18,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function scrollToCard(index) {
-        const card = cards[index];
-        carousel.scrollTo({
-            left: card.offsetLeft,
-            behavior: 'smooth'
-        });
+        if (cards[index]) {
+            carousel.scrollTo({
+                left: cards[index].offsetLeft,
+                behavior: 'smooth'
+            });
+        }
     }
 
     prevButton.addEventListener('click', () => {
@@ -41,10 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Aggiorna lo stato dei pulsanti all'inizializzazione
     updateButtons();
 
-    // Gestione dello scroll manuale
     carousel.addEventListener('scroll', () => {
         const scrollPosition = carousel.scrollLeft;
         currentIndex = Math.round(scrollPosition / carousel.offsetWidth);

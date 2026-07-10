@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio di Giovanni Romano - Sviluppatore Software">
-    <meta name="keywords" content="sviluppatore, software, web development, frontend, backend, Python, JavaScript">
+    <meta name="keywords" content="sviluppatore, software, web development, frontend, backend, Python, JavaScript, Flutter, React">
     <meta name="author" content="Giovanni Romano">
     <meta property="og:title" content="Giovanni Romano - Portfolio">
     <meta property="og:description" content="Portfolio personale di Giovanni Romano, sviluppatore software">
-    <meta property="og:image" content="tua-foto.jpg">
+    <meta property="og:image" content="./media/io/image.png">
+    
     <title>Giovanni Romano | Portfolio</title>
+    
     <link rel="icon" type="image/png" href="./media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="src/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="src/js/carousel.js" defer></script>
+    
+    <script>
+        // Immediata impostazione del tema per evitare flash di colore bianco
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
 </head>
 <body>
-    <div id="loader-wrapper">
+    <!-- Elegant Page Loader -->
+    <div id="loader-wrapper" aria-hidden="true">
         <div class="loader"></div>
     </div>
+
+    <!-- Navigation Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -30,182 +45,194 @@
                 <li><a href="#skills">Competenze</a></li>
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home">
-            <div class="profile-container">
+            <div class="profile-container reveal">
+                <!-- Profile Left: Bio Details & Introduction -->
                 <div class="profile-header">
-                    <img src="./media/io/image.png" alt="Gianni" class="profile-img">
                     <div class="profile-info">
+                        <h3>Ciao, sono</h3>
                         <h1>Giovanni Romano</h1>
-                        <h3>He/Him - <script>document.write(new Date().getFullYear() - 2005);</script> anni</h3>
-                        <p class="title">Sviluppatore Software</p>
+                        <h3>He/Him — <span><script>document.write(new Date().getFullYear() - 2005);</script> anni</span></h3>
+                        
+                        <!-- Typing animation text container -->
+                        <div class="title-container">
+                            <span class="title" id="typed-text"></span><span class="type-cursor">|</span>
+                        </div>
+                        
                         <div class="profile-tags">
                             <span>Web Development</span>
                             <span>App Development</span>
+                            <span>Home Labbing</span>
+                            <span>Linux Servers</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Profile Right: Slideshow carousel of profile images -->
+                <div class="profile-img-container">
+                    <div class="profile-img-glow"></div>
+                    <div class="profile-img-carousel">
+                        <img src="./media/io/image.png" alt="Foto Profilo Giovanni Romano 1" class="profile-img active">
+                        <img src="./media/io/io.JPG" alt="Foto Profilo Giovanni Romano 2" class="profile-img">
+                        <img src="./media/io/io2.JPG" alt="Foto Profilo Giovanni Romano 3" class="profile-img">
+                    </div>
+                </div>
+
+                <!-- Extended Bio Box spanning full width -->
                 <div class="bio-container">
                     <p class="bio">
-                        Sono uno studente appassionato di programmazione e tecnologia. 
+                        Sono uno studente appassionato di <strong>programmazione</strong> e <strong>tecnologia</strong>. 
                         Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
-                        Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, sia attraverso il backend che nel frontend. 
-                        Mi interessa anche il mondo dell'intelligenza artificiale, del design e dell'ottimizzazione del codice. 
-                        Oltre a sviluppare software, mi piace sperimentare con server Linux e trovare modi innovativi per integrare 
-                        tecnologia e automazione nella vita quotidiana.
+                        Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, curando sia la logica del <strong>backend</strong> sia l'esperienza utente nel <strong>frontend</strong>. 
+                        Mi interessa anche il mondo dell'<strong>intelligenza artificiale</strong>, del design e dell'ottimizzazione del codice. 
+                        Oltre a sviluppare software, mi piace sperimentare con <strong>server Linux</strong> e trovare modi innovativi per integrare tecnologia e automazione nella vita quotidiana.
                     </p>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Showcase Section -->
         <section id="progetti">
-            <h2 style="margin: 0;">I Miei Progetti</h2>
-            <div class="carousel-container">
-                <button class="carousel-button prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                
-                <div class="progetti-carousel">
-                    <!-- Library -->
-                    <div class="progetto-card" data-color="#4a3928">
-                        <div class="project-image">
-                            <img src="./media/library/homelittle.PNG" alt="Library Management">
-                        </div>
-                        <h3>Library managment</h3>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Django</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="src/library.html" class="info-btn">Maggiori Informazioni</a>
+            <h2 class="reveal">I Miei Progetti</h2>
+            <div class="progetti-grid reveal">
+                <!-- Project: Library Management -->
+                <div class="progetto-card" data-color="#48392a">
+                    <div class="project-image">
+                        <img src="./media/library/homelittle.PNG" alt="Schermata del sistema Library Management">
                     </div>
-
-                    <!-- ITET -->
-                    <div class="progetto-card" data-color="#f8a00f">
-                        <div class="project-image">
-                            <img src="./media/itet/ItetOrientaicon.png" alt="Progetto 2">
-                        </div>
-                        <h3>Itet Orienta</h3>
-                        <div class="project-tags">
-                            <span>Dart</span>
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                        </div>
-                        <a href="src/itet.html" class="info-btn">Maggiori Informazioni</a>
+                    <h3>Library Management</h3>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                        <span>Bootstrap</span>
                     </div>
-
-                    <!-- GoSport -->
-                    <!--<div class="progetto-card" data-color="#AF52DE">
-                        <div class="project-image">
-                            <img src="path/to/project2.jpg" alt="Progetto 2">
-                        </div>
-                        <h3>GoSport</h3>
-                        <div class="project-tags">
-                            <span>Dart</span>
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                        </div>
-                        <a href="itet.html" class="info-btn">Maggiori Informazioni</a>
-                    </div>-->
-
-                    <!-- Victoria -->
-                    <div class="progetto-card" data-color="#182335">
-                        <div class="project-image">
-                            <img src="./media/victoria/VictoriaTeam.jpg">
-                        </div>
-                        <h3>Victoria Team</h3>
-                        <div class="project-tags">
-                            <span>Monithon</span>
-                            <span>Google Sites</span>
-                        </div>
-                        <a href="src/victoria.html" class="info-btn">Maggiori Informazioni</a>
-                    </div>
+                    <a href="src/library.html" class="info-btn">Maggiori Informazioni</a>
                 </div>
 
-                <button class="carousel-button next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <!-- Project: Itet Orienta -->
+                <div class="progetto-card" data-color="#f59e0b">
+                    <div class="project-image">
+                        <img src="./media/itet/ItetOrientaicon.png" alt="Icona di Itet Orienta">
+                    </div>
+                    <h3>Itet Orienta</h3>
+                    <div class="project-tags">
+                        <span>Dart</span>
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Android Studio</span>
+                    </div>
+                    <a href="src/itet.html" class="info-btn">Maggiori Informazioni</a>
+                </div>
+
+                <!-- Project: Victoria Team -->
+                <div class="progetto-card" data-color="#182335">
+                    <div class="project-image">
+                        <img src="./media/victoria/VictoriaTeam.jpg" alt="Schermata di Victoria Team">
+                    </div>
+                    <h3>Victoria Team</h3>
+                    <div class="project-tags">
+                        <span>Monithon</span>
+                        <span>Google Sites</span>
+                        <span>Web Design</span>
+                    </div>
+                    <a href="src/victoria.html" class="info-btn">Maggiori Informazioni</a>
+                </div>
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills">
-            <h2>Competenze</h2>
-            <div class="skills-container">
-                <!-- Frontend -->
+            <h2 class="reveal">Competenze</h2>
+            <div class="skills-container reveal">
+                <!-- Card: Frontend -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Frontend</h3>
                     </div>
-                    <h3>Frontend</h3>
                     <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript (ES6)</span>
                         <span>React</span>
                         <span>Streamlit</span>
                         <span>Flutter</span>
                     </div>
                 </div>
 
-                <!-- Backend -->
+                <!-- Card: Backend -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-server" aria-hidden="true"></i>
+                        </div>
+                        <h3>Backend</h3>
                     </div>
-                    <h3>Backend</h3>
                     <div class="skill-tags">
-                        <span>Postgres</span>
+                        <span>PostgreSQL</span>
                         <span>Node.js</span>
                         <span>Django</span>
-                        <span>Pandas / Numpy</span>
+                        <span>Pandas / NumPy</span>
                         <span>REST APIs</span>
+                        <span>SQL</span>
                     </div>
                 </div>
 
-                <!-- Languages -->
+                <!-- Card: Languages -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Linguaggi</h3>
                     </div>
-                    <h3>Linguaggi</h3>
                     <div class="skill-tags">
                         <span>Python</span>
-                        <span>Java / EE</span>
+                        <span>Java / Jakarta EE</span>
                         <span>C</span>
                         <span>JavaScript</span>
                         <span>PHP</span>
-                        <span>SQL</span>
                         <span>Dart</span>
                         <span>Matlab</span>
                     </div>
                 </div>
 
-                <!-- Tools -->
+                <!-- Card: Tools -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                        </div>
+                        <h3>Strumenti</h3>
                     </div>
-                    <h3>Strumenti</h3>
                     <div class="skill-tags">
-                        <span>Git</span>
+                        <span>Git & GitHub</span>
                         <span>VS Code</span>
-                        <span>Docker / Portainer</span>
-                        <span>Windows / Linux</span>
+                        <span>Docker & Portainer</span>
+                        <span>Windows & Linux Server</span>
                         <span>Figma</span>
                     </div>
                 </div>
 
+                <!-- Card: Soft Skills & Interessi (Wide Card) -->
                 <div class="skill-card wide-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <h3>Soft Skills & Interessi</h3>
                     </div>
-                    <h3>Soft Skills</h3>
                     <div class="skill-tags">
                         <span>Problem Solving</span>
                         <span>Team Work</span>
@@ -213,51 +240,59 @@
                         <span>Time Management</span>
                         <span>Communication</span>
                         <span>Adaptability</span>
-                        <span>Video editing</span>
+                        <span>Video Editing</span>
                         <span>Home Labbing</span>
+                        <span>System Administration</span>
                     </div>
                 </div>
-
             </div>
         </section>
 
+        <!-- Contacts Section -->
         <section id="contatti">
-            <h2>Contatti</h2>
-            <div class="contacts-container">
+            <h2 class="reveal">Contatti</h2>
+            <div class="contacts-container reveal">
                 <div class="contact-info">
-                    <p>Vuoi collaborare o hai domande? Contattami!</p>
+                    <p>Hai in mente un progetto o vuoi fare due chiacchiere? Contattami sui social o via email!</p>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/gianni20" class="social-link github" target="_blank">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/gianni20" class="social-link github" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/giovanniromano20/" class="social-link linkedin" target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                    
+                    <a href="https://www.linkedin.com/in/giovanniromano20/" class="social-link linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
+                    
                     <a href="mailto:gianniromano2005@gmail.com" class="social-link email">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span>Email</span>
                     </a>
-                    <a href="https://www.instagram.com/gianni_romano05" class="social-link instagram" target="_blank">
-                        <i class="fab fa-instagram"></i>
+                    
+                    <a href="https://www.instagram.com/gianni_romano05" class="social-link instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                         <span>Instagram</span>
                     </a>
-                    <a href="https://linktr.ee/Gianniromano20" class="social-link linktree" target="_blank" aria-label="Visita il mio profilo Linktree">
-                        <i class="fas fa-link"></i>
+                    
+                    <a href="https://linktr.ee/Gianniromano20" class="social-link linktree" target="_blank" rel="noopener noreferrer" aria-label="Linktree Giovanni Romano">
+                        <i class="fas fa-link" aria-hidden="true"></i>
                         <span>Linktree</span>
                     </a>
-
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>Giovanni Romano - Portfolio</p>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Giovanni Romano. Tutti i diritti riservati.</p>
     </footer>
-    <script src="src/js/animations.js"></script>
+
+    <!-- Scripts -->
     <script src="src/js/theme.js"></script>
+    <script src="src/js/carousel.js"></script>
+    <script src="src/js/animations.js"></script>
 </body>
 </html>

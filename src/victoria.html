@@ -4,84 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victoria - Giovanni Romano</title>
+    
     <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="../index.html">GR</a>
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#tec">Tecnologie</a></li>
                 <li><a href="#sum">Caratteristiche</a></li>
-                <li><a href="#screen">Screenshoot</a></li>
+                <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
         </nav>
     </header>
 
-    <div class="project-details">
+    <main class="project-details">
+        <!-- Project Header Title -->
         <div class="project-header">
             <h1>Victoria Team</h1>
+            <br>
             <p>Sito Web presentazione progetto</p>
         </div>
 
+        <!-- Image Preview Showcase -->
         <div class="project-preview">
-            <img src="../media/victoria/HOMEPAGE.png" alt="Homepage">
+            <img src="../media/victoria/HOMEPAGE.png" alt="Schermata Home principale del sito Victoria Team">
         </div>
 
+        <!-- Project Description -->
         <div class="project-description" id="intro">
             <h2>Il Progetto</h2>
-            <p>Il progetto era una monitorizzazione graduale del rinnovamento della pizza della Vittoria, Marsala e di come sono stati usati i fondi europei.</p>
-            <p>Io sono stato incaricato di creare un sito web vetrina per presentare il progetto più interattivamente alla giuria del concorso.</p>
+            <p>
+                Il progetto consisteva nel monitoraggio civico del rinnovamento urbano di Piazza della Vittoria a Marsala, analizzando in particolare l'efficienza e le modalità di utilizzo dei fondi europei stanziati per l'opera.
+            </p>
+            <p>
+                Sono stato incaricato di progettare e realizzare un sito web vetrina dedicato alla presentazione dell'iniziativa, per rendere la consultazione dei dati e delle analisi interattiva e d'impatto per la giuria del concorso nazionale "A Scuola di OpenCoesione".
+            </p>
         </div>
 
+        <!-- Technologies -->
         <div class="technologies" id="tec">
             <h2>Tecnologie Utilizzate</h2>
             <ul>
                 <li>Google Sites</li>
+                <li>Monithon Platform</li>
+                <li>Open Data Analysis</li>
+                <li>Web Design</li>
             </ul>
         </div>
 
+        <!-- Features list -->
         <div class="features" id="sum">
             <h2>Caratteristiche Principali</h2>
             <ul>
-                <li>HomePage riassuntiva</li>
-                <li>Design leggero</li>
-                <li>Intera descrizione del progetto</li>
-                <li>Form contatti</li>
+                <li>Homepage riassuntiva dei punti chiave del progetto</li>
+                <li>Design leggero, leggibile e accessibile</li>
+                <li>Descrizione dettagliata di tutte le fasi del monitoraggio</li>
+                <li>Form di contatti per la ricezione di feedback civici</li>
             </ul>
         </div>
 
+        <!-- Screenshots Grid -->
         <div class="screenshots" id="screen">
-            <h2>Screenshot</h2>
+            <h2>Screenshot Applicazione</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <img src="../media/victoria/fullhome.png" alt="Homepage">
+                    <img src="../media/victoria/fullhome.png" alt="Homepage estesa">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/victoria/progetto.png" alt="Homepage">
+                    <img src="../media/victoria/progetto.png" alt="Sezione dettagli progetto">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/victoria/team.png" alt="Homepage">
+                    <img src="../media/victoria/team.png" alt="Sezione dedicata ai membri del Team">
                 </div>
             </div>
         </div>
 
+        <!-- Call to Action Links -->
         <div class="project-links" id="links">
-            <a href="https://sites.google.com/view/victoriateam/" target="_blank">
-                <i class="fas fa-laptop"></i> Preview
+            <a href="https://sites.google.com/view/victoriateam/" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-laptop" aria-hidden="true"></i> Visita il Sito
             </a>
         </div>
-    </div>
+    </main>
 
     <script src="js/theme.js"></script>
 </body>

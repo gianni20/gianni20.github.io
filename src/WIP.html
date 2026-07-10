@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In Costruzione - Giovanni Romano</title>
+    
     <link rel="icon" type="image/png" href="../media/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
+    
     <style>
         .wip-container {
             min-height: 100vh;
@@ -16,71 +28,81 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            background-color: var(--bg-color);
+            background: var(--bg-color);
+            background-image: var(--bg-gradient);
             color: var(--text-color);
+            font-family: 'Inter', sans-serif;
         }
 
         .wip-icon {
-            font-size: 5rem;
-            color: var(--primary-color);
+            font-size: 5.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 2rem;
             animation: rotate 4s infinite linear;
         }
 
         .wip-title {
-            font-size: 2.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 800;
             margin-bottom: 1rem;
             color: var(--text-color);
         }
 
         .wip-text {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-color);
+            margin-bottom: 2.5rem;
+            color: var(--text-muted);
             max-width: 600px;
+            font-weight: 300;
         }
 
         .home-button {
-            padding: 1rem 2rem;
-            background-color: var(--primary-color);
+            padding: 0.9rem 2.25rem;
+            background: var(--primary-gradient);
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 16px;
+            font-size: 1.05rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 8px 20px var(--shadow-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .home-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px var(--shadow-color);
+            box-shadow: 0 12px 25px var(--glow-color);
         }
 
         @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .loading-bar {
-            width: 200px;
+            width: 240px;
             height: 6px;
             background: var(--card-bg);
-            border-radius: 3px;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
             margin: 2rem 0;
             overflow: hidden;
+            position: relative;
         }
 
         .loading-progress {
             width: 50%;
             height: 100%;
-            background: var(--primary-color);
-            border-radius: 3px;
-            animation: loading 2s infinite ease-in-out;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+            animation: loading 2.2s infinite ease-in-out;
         }
 
         @keyframes loading {
@@ -91,17 +113,17 @@
 </head>
 <body>
     <div class="wip-container">
-        <i class="fas fa-cog wip-icon"></i>
+        <i class="fas fa-cog wip-icon" aria-hidden="true"></i>
         <h1 class="wip-title">Pagina in Costruzione</h1>
         <p class="wip-text">
-            Stiamo lavorando per migliorare questa sezione del sito. 
-            Torna presto per vedere le novità!
+            Sto lavorando per ottimizzare e ampliare questa sezione del portfolio. 
+            Torna a trovarmi presto per vedere gli ultimi aggiornamenti!
         </p>
-        <div class="loading-bar">
+        <div class="loading-bar" aria-hidden="true">
             <div class="loading-progress"></div>
         </div>
         <a href="../index.html" class="home-button">
-            <i class="fas fa-home"></i> Torna alla Home
+            <i class="fas fa-home" aria-hidden="true"></i> Torna alla Home
         </a>
     </div>
 

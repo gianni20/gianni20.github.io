@@ -4,36 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Itet Orienta - Giovanni Romano</title>
+    
     <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="../index.html">GR</a>
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#tec">Tecnologie</a></li>
                 <li><a href="#sum">Caratteristiche</a></li>
-                <li><a href="#screen">Screenshoot</a></li>
+                <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
         </nav>
     </header>
 
-    <div class="project-details">
+    <main class="project-details">
+        <!-- Project Header Title -->
         <div class="project-header">
             <h1>Itet Orienta</h1>
+            <br>
             <p>App vetrina Android / iOS / Web</p>
         </div>
 
+        <!-- Video Preview Showcase -->
         <div class="project-preview">
             <video controls width="100%">
                 <source src="../media/itet/ItetVideo.mp4" type="video/mp4">
@@ -41,56 +56,67 @@
             </video>
         </div>
 
+        <!-- Project Description -->
         <div class="project-description" id="intro">
             <h2>Il Progetto</h2>
-            <p>Applicazione vetrina per la presentazione dell'instituto tecnico economico turistico "G. Garibaldi". Lo scopo del progetto è quello di presentare la scuola alle famiglie e ai ragazzi diplomati della scuola secondaria.</p>
-            <p>Il progetto è stato presentato al fine del progetto pon "Sviluppazione Creativa" conseguito nell'instituto stesso.</p>
+            <p>
+                Itet Orienta è un'applicazione vetrina cross-platform progettata per promuovere e presentare l'Istituto Tecnico Economico e Tecnologico "G. Garibaldi" di Marsala. 
+                L'obiettivo primario dell'app è quello di guidare le famiglie e gli studenti delle scuole secondarie di primo grado nella scelta del percorso di studi superiore, facilitando l'orientamento scolastico.
+            </p>
+            <p>
+                Il progetto è stato sviluppato e presentato in occasione del progetto PON "Sviluppo Creativo", svoltosi all'interno dell'istituto stesso.
+            </p>
         </div>
 
+        <!-- Technologies -->
         <div class="technologies" id="tec">
             <h2>Tecnologie Utilizzate</h2>
             <ul>
-                <li>Flutter</li>
-                <li>Android Studio</li>
-                <li>GIMP</li>
-                <li>Figma</li>
+                <li>Flutter Framework</li>
+                <li>Dart Programming Language</li>
+                <li>Android Studio IDE</li>
+                <li>Figma (UI/UX Mockups)</li>
+                <li>GIMP (Grafica e Assets)</li>
             </ul>
         </div>
 
+        <!-- Features list -->
         <div class="features" id="sum">
             <h2>Caratteristiche Principali</h2>
             <ul>
-                <li>Libero accesso</li>
-                <li>Sezioni organizzate</li>
-                <li>Contatti Telefonici immediati</li>
+                <li>Accesso libero e senza autenticazione obbligatoria</li>
+                <li>Sezioni informative strutturate per indirizzi di studio</li>
+                <li>Integrazione diretta per chiamate telefoniche e email di segreteria</li>
+                <li>Interfaccia moderna e fluida ottimizzata per dispositivi mobili</li>
             </ul>
         </div>
 
+        <!-- Screenshots Grid -->
         <div class="screenshots" id="screen">
-            <h2>Screenshot</h2>
+            <h2>Screenshot Applicazione</h2>
             <div class="screenshots-grid">
-                <div class="screenshot" style="width: 50%;">
-                    <img src="../media/itet/HOMEitetshort.JPG" alt="Homepage">
+                <div class="screenshot">
+                    <img src="../media/itet/HOMEitetshort.JPG" alt="Homepage ITET Orienta">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/itet/menu.jpg" alt="Homepage">
+                    <img src="../media/itet/menu.jpg" alt="Menu di navigazione interna">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/itet/TASTIitet.jpg" alt="Homepage">
+                    <img src="../media/itet/TASTIitet.jpg" alt="Pannello dei pulsanti rapidi">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/itet/MATERIEitet.jpg" alt="Homepage">
+                    <img src="../media/itet/MATERIEitet.jpg" alt="Dettaglio materie scolastiche">
                 </div>
-
             </div>
         </div>
 
+        <!-- Call to Action Links -->
         <div class="project-links" id="links">
             <a href="disabled.html">
-                <i class="fab fa-github"></i> Codice Sorgente
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
             </a>
         </div>
-    </div>
+    </main>
 
     <script src="js/theme.js"></script>
 </body>

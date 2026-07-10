@@ -4,36 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management - Giovanni Romano</title>
+    
     <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="../index.html">GR</a>
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#tec">Tecnologie</a></li>
                 <li><a href="#sum">Caratteristiche</a></li>
-                <li><a href="#screen">Screenshoot</a></li>
+                <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
         </nav>
     </header>
 
-    <div class="project-details">
+    <main class="project-details">
+        <!-- Project Header Title -->
         <div class="project-header">
             <h1>Library Management</h1>
+            <br>
             <p>Sistema di gestione biblioteca con React e Django</p>
         </div>
 
+        <!-- Video Preview Showcase -->
         <div class="project-preview">
             <video controls width="100%">
                 <source src="../media/library/Library.mp4" type="video/mp4">
@@ -41,56 +56,66 @@
             </video>
         </div>
 
+        <!-- Project Description -->
         <div class="project-description" id="intro">
             <h2>Il Progetto</h2>
-            <p>Un sistema completo per la gestione di una biblioteca, che include funzionalità per il prestito di libri, la gestione degli utenti e il monitoraggio delle disponibilità.</p>
-            <p>Il progetto è stato creato al fine di creare un'interfaccia in grado di rispondere e interagire con un database esterno tramite API calls.</p>
+            <p>
+                Questo progetto consiste in un sistema completo e intuitivo per la gestione operativa di una biblioteca. 
+                Include flussi per la registrazione di prestiti e restituzioni di libri, la gestione di anagrafiche utenti e il monitoraggio in tempo reale della disponibilità dei volumi a catalogo.
+            </p>
+            <p>
+                L'applicazione è stata concepita con un'architettura disaccoppiata (Decoupled Architecture), dove un frontend reattivo interagisce con un server backend RESTful centralizzato tramite chiamate API asincrone sicure.
+            </p>
         </div>
 
+        <!-- Technologies -->
         <div class="technologies" id="tec">
             <h2>Tecnologie Utilizzate</h2>
             <ul>
-                <li>React</li>
-                <li>Django</li>
-                <li>PostgreSQL</li>
-                <li>REST API</li>
-                <li>Bootstrap</li>
+                <li>React.js</li>
+                <li>Django REST Framework</li>
+                <li>PostgreSQL Database</li>
+                <li>Bootstrap CSS</li>
+                <li>RESTful API Calls</li>
             </ul>
         </div>
 
+        <!-- Features list -->
         <div class="features" id="sum">
             <h2>Caratteristiche Principali</h2>
             <ul>
-                <li>Gestione prestiti e restituzioni</li>
-                <li>Sistema di autenticazione utenti</li>
-                <li>Dashboard amministrativa</li>
-                <li>Ricerca avanzata libri</li>
-                <li>Notifiche ritardi prestiti</li>
-                <li>Profilo personale</li>
+                <li>Gestione e tracciamento prestiti e restituzioni</li>
+                <li>Sistema di autenticazione e autorizzazione utenti</li>
+                <li>Pannello amministrativo (dashboard) di monitoraggio</li>
+                <li>Filtri di ricerca avanzati per titoli, autori e generi</li>
+                <li>Notifiche automatiche per ritardi nelle consegne</li>
+                <li>Profilo personale utente con storico attività</li>
             </ul>
         </div>
 
+        <!-- Screenshots Grid -->
         <div class="screenshots" id="screen">
-            <h2>Screenshot</h2>
+            <h2>Screenshot Applicazione</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <img src="../media/library/fullbook.png" alt="Book Details">
+                    <img src="../media/library/fullbook.png" alt="Dettagli libro e scheda catalogo">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/library/profile.png" alt="User Profile">
+                    <img src="../media/library/profile.png" alt="Schermata del profilo personale utente">
                 </div>
                 <div class="screenshot">
-                    <img src="../media/library/home.png" alt="Homepage">
+                    <img src="../media/library/home.png" alt="Pannello Home principale della biblioteca">
                 </div>
             </div>
         </div>
 
+        <!-- Call to Action Links -->
         <div class="project-links" id="links">
             <a href="disabled.html">
-                <i class="fab fa-github"></i> Codice Sorgente
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
             </a>
         </div>
-    </div>
+    </main>
 
     <script src="js/theme.js"></script>
 </body>
