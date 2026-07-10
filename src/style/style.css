@@ -299,11 +299,14 @@ section h2::after {
     color: var(--text-color);
 }
 
-.profile-info h3 {
+.profile-info h3,
+.hero-subtitle,
+.hero-pronouns {
     font-size: 1.5rem;
     color: var(--text-muted);
     font-weight: 400;
     margin-bottom: 0.5rem;
+    font-family: 'Outfit', sans-serif;
 }
 
 .profile-info h3 span {
@@ -486,6 +489,12 @@ section h2::after {
 
     .profile-info h1 {
         font-size: 3.25rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        min-height: 2.8rem;
+        margin: 1rem 0;
     }
 
     .profile-tags {

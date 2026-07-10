@@ -8,15 +8,16 @@
     <meta name="author" content="Giovanni Romano">
     <meta property="og:title" content="Giovanni Romano - Portfolio">
     <meta property="og:description" content="Portfolio personale di Giovanni Romano, sviluppatore software">
-    <meta property="og:image" content="./media/io/image.png">
+    <meta property="og:image" content="./media/io/io1.webp">
     
     <title>Giovanni Romano | Portfolio</title>
     
     <link rel="icon" type="image/png" href="./media/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="./media/io/io1.webp">
     <link rel="stylesheet" href="src/style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <script>
         // Immediata impostazione del tema per evitare flash di colore bianco
@@ -58,9 +59,9 @@
                 <!-- Profile Left: Bio Details & Introduction -->
                 <div class="profile-header">
                     <div class="profile-info">
-                        <h3>Ciao, sono</h3>
+                        <p class="hero-subtitle">Ciao, sono</p>
                         <h1>Giovanni Romano</h1>
-                        <h3>He/Him — <span><script>document.write(new Date().getFullYear() - 2005);</script> anni</span></h3>
+                        <p class="hero-pronouns">He/Him — <span><script>document.write(new Date().getFullYear() - 2005);</script> anni</span></p>
                         
                         <!-- Typing animation text container -->
                         <div class="title-container">
@@ -80,11 +81,11 @@
                 <div class="profile-img-container">
                     <div class="profile-img-glow"></div>
                     <div class="profile-img-carousel">
-                        <img src="./media/io/io1.png" alt="Foto Profilo Giovanni Romano 1" class="profile-img active">
-                        <img src="./media/io/io.JPG" alt="Foto Profilo Giovanni Romano 2" class="profile-img">
-                        <img src="./media/io/io2.JPG" alt="Foto Profilo Giovanni Romano 3" class="profile-img">
+                        <img src="./media/io/io1.webp" alt="Foto Profilo Giovanni Romano 1" class="profile-img active">
+                        <img src="./media/io/io.webp" alt="Foto Profilo Giovanni Romano 2" class="profile-img">
+                        <img src="./media/io/io2.webp" alt="Foto Profilo Giovanni Romano 3" class="profile-img">
                         <img src="./media/io/io3.webp" alt="Foto Profilo Giovanni Romano 3" class="profile-img">
-                        <img src="./media/io/io4.JPG" alt="Foto Profilo Giovanni Romano 3" class="profile-img">
+                        <!-- <img src="./media/io/io4.webp" alt="Foto Profilo Giovanni Romano 3" class="profile-img"> -->
                     </div>
                 </div>
 
@@ -108,7 +109,7 @@
                 <!-- Project: Library Management -->
                 <div class="progetto-card" data-color="#48392a">
                     <div class="project-image">
-                        <img src="./media/library/homelittle.PNG" alt="Schermata del sistema Library Management">
+                        <img src="./media/library/homelittle.webp" alt="Schermata del sistema Library Management">
                     </div>
                     <h3>Library Management</h3>
                     <div class="project-tags">
@@ -123,7 +124,7 @@
                 <!-- Project: Itet Orienta -->
                 <div class="progetto-card" data-color="#f59e0b">
                     <div class="project-image">
-                        <img src="./media/itet/ItetOrientaicon.png" alt="Icona di Itet Orienta">
+                        <img src="./media/itet/ItetOrientaicon.webp" alt="Icona di Itet Orienta">
                     </div>
                     <h3>Itet Orienta</h3>
                     <div class="project-tags">
@@ -138,7 +139,7 @@
                 <!-- Project: Victoria Team -->
                 <div class="progetto-card" data-color="#14b8a6">
                     <div class="project-image">
-                        <img src="./media/victoria/VictoriaTeam.jpg" alt="Schermata di Victoria Team">
+                        <img src="./media/victoria/VictoriaTeam.webp" alt="Schermata di Victoria Team">
                     </div>
                     <h3>Victoria Team</h3>
                     <div class="project-tags">
@@ -152,7 +153,7 @@
                 <!-- Project: Crystals of the Soul -->
                 <div class="progetto-card" data-color="#9ca3af">
                     <div class="project-image">
-                        <img src="./media/Crystals/green_environment.png" alt="Schermata di Crystals of the Soul">
+                        <img src="./media/Crystals/green_environment.webp" alt="Schermata di Crystals of the Soul">
                     </div>
                     <h3>Crystals of the Soul</h3>
                     <div class="project-tags">
@@ -167,7 +168,7 @@
                 <!-- Project: Bostonshouse -->
                 <div class="progetto-card" data-color="#3b82f6">
                     <div class="project-image">
-                        <img src="./media/boston/non lineare2.png" alt="Grafico di predizione Bostonshouse">
+                        <img src="./media/boston/non lineare2.webp" alt="Grafico di predizione Bostonshouse">
                     </div>
                     <h3>Bostonshouse</h3>
                     <div class="project-tags">
@@ -182,7 +183,7 @@
                 <!-- Project: Cash Hive -->
                 <div class="progetto-card" data-color="#10b981">
                     <div class="project-image">
-                        <img src="./media/cashhive/0.png" alt="Schermata di Cash Hive">
+                        <img src="./media/cashhive/0.webp" alt="Schermata di Cash Hive">
                     </div>
                     <h3>Cash Hive</h3>
                     <div class="project-tags">
