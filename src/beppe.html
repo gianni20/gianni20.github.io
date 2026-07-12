@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeppeRomano.eu - Giovanni Romano</title>
+    
+    <link rel="icon" type="image/png" href="../media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.documentElement.classList.remove('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><i class="fas fa-chevron-left" aria-hidden="true"></i> GR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tec">Tecnologie</a></li>
+                <li><a href="#sum">Caratteristiche</a></li>
+                <li><a href="#screen">Screenshots</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="project-details">
+        <div class="project-header">
+            <h1>BeppeRomano.eu</h1>
+            <br>
+            <p>Sito ufficiale e galleria d'arte digitale del pittore Beppe Romano</p>
+        </div>
+
+        <div class="project-preview">
+            <img src="../media/beppe/home.png" alt="Anteprima del progetto BeppeRomano.eu">
+        </div>
+
+        <div class="project-description" id="intro">
+            <h2>Il Progetto</h2>
+            <p>
+                <strong><a href="https://www.bepperomano.eu" target="_blank" rel="noopener noreferrer">BeppeRomano.eu</a></strong> è il sito web ufficiale e galleria d'arte digitale del pittore Beppe Romano. Il progetto è concepito come una vetrina virtuale che valorizza la lunga carriera artistica dell'artista, iniziata nel 1977. Offre una panoramica completa dei suoi dipinti, delle sue mostre ed esposizioni storiche e delle news relative ai suoi corsi ed eventi in atelier.
+            </p>
+            <p>
+                Per massimizzare le prestazioni e ridurre a zero i costi di manutenzione e complessità delle infrastrutture database, il sito adotta un'architettura <strong>flat-file</strong> sviluppata in PHP nativo. Tutte le informazioni su opere, mostre e news sono gestite tramite file JSON strutturati e un pannello di controllo ad accesso riservato per l'amministratore, integrando la massima sicurezza grazie all'uso di variabili d'ambiente <code>.env</code> e restrizioni via <code>.htaccess</code>.
+            </p>
+        </div>
+
+        <div class="technologies" id="tec">
+            <h2>Tecnologie Utilizzate</h2>
+            <ul>
+                <li>PHP (Nativo)</li>
+                <li>JSON (Flat-File DB)</li>
+                <li>Tailwind CSS</li>
+                <li>JavaScript (ES6)</li>
+                <li>.htaccess / .env (Security)</li>
+            </ul>
+        </div>
+
+        <div class="features" id="sum">
+            <h2>Caratteristiche Principali</h2>
+            <ul>
+                <li><span><strong>Home &amp; Biografia:</strong> Pagina di benvenuto curata nei minimi dettagli con biografia, note critiche e visione artistica dell'artista.</span></li>
+                <li><span><strong>Carosello in Evidenza:</strong> Slideshow dinamico e interattivo che mostra le opere scelte in evidenza direttamente dall'artista.</span></li>
+                <li><span><strong>Galleria delle Opere:</strong> Catalogo ordinato cronologicamente con vista lightbox a schermo intero e supporto alla navigazione da tastiera.</span></li>
+                <li><span><strong>Gestione Mostre:</strong> Elenco strutturato delle mostre personali e collettive realizzate dal 1981 ad oggi.</span></li>
+                <li><span><strong>Sezione News:</strong> Spazio dedicato agli aggiornamenti e alla didattica (es. corsi di pittura ad olio ed eventi in atelier).</span></li>
+                <li><span><strong>Pannello di Amministrazione:</strong> Area riservata (<code>zxyanm.php</code>) protetta da password cifrata con Bcrypt per la gestione in tempo reale di opere, carosello, mostre e news.</span></li>
+                <li><span><strong>Sicurezza e Protezione:</strong> Configurazione di <code>.htaccess</code> per impedire l'accesso diretto via browser ai file di configurazione ed ai file di dati.</span></li>
+            </ul>
+        </div>
+
+        <div class="screenshots" id="screen">
+            <h2>Screenshot</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <img src="../media/beppe/opera.png" alt="Sezione Mostre Personali e Collettive">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/opere.png" alt="Sezione Mostre Personali e Collettive">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/news.png" alt="Sezione News e Didattica">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/mostre.png" alt="Sezione Mostre Personali e Collettive">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/rece.png" alt="Sezione Recensioni e Note Critiche">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/contatti.png" alt="Sezione Contatti e Social Media">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/login.png" alt="Pannello di amministrazione per il caricamento delle opere">
+                </div>
+                <div class="screenshot">
+                    <img src="../media/beppe/admin.png" alt="Pannello di amministrazione per il caricamento delle opere">
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. COLLEGAMENTI ESTERNI (Call to Action) -->
+        <div class="project-links" id="links">
+            <a href="https://github.com/gianni20/BeppeRomano.eu" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Codice Sorgente
+            </a>
+            <!-- Link demo live scommentabile all'occorrenza -->
+            <!--
+            <a href="https://www.bepperomano.eu" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo Live
+            </a>
+            -->
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
