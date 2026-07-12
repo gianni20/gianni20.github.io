@@ -219,22 +219,55 @@ header {
     border-color: transparent;
 }
 
-/* Responsive Navigation */
+/* Responsive Navigation & Layout Spacing */
 @media (max-width: 768px) {
     header {
-        padding: 1rem;
+        padding: 0.85rem 1rem;
     }
     
     .nav-links {
-        gap: 1.25rem;
+        gap: 1rem;
     }
     
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .logo a {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .theme-toggle {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 5rem 1rem 3rem 1rem;
+        min-height: auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 0.75rem;
+    }
+    
+    .nav-links {
+        gap: 0.65rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .logo a {
+        font-size: 1.15rem;
     }
 }
 
@@ -511,13 +544,92 @@ section h2::after {
     }
 }
 
+@media (max-width: 768px) {
+    .bio-container {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .bio {
+        font-size: 1.05rem;
+        text-align: left;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-info h1 {
+        font-size: 2.25rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        min-height: 2.2rem;
+        margin: 0.75rem 0;
+    }
+
+    .hero-subtitle,
+    .hero-pronouns {
+        font-size: 1.2rem;
+    }
+
+    .profile-tags span {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .profile-img-carousel,
+    .profile-img-glow {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-img-carousel {
+        border-radius: 20px;
+    }
+}
+
 /* Projects Section (Grid instead of broken/clunky carousel) */
 .progetti-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 3rem;
     width: 100%;
     padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .progetti-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .progetto-card {
+        padding: 1.15rem;
+        border-radius: 18px;
+    }
+
+    .progetto-card h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .project-tags {
+        margin: 1rem 0;
+    }
+
+    .project-tags span {
+        padding: 0.3rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-image {
+        height: 180px;
+        border-radius: 12px;
+    }
 }
 
 .progetto-card {
