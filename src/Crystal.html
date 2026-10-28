@@ -49,9 +49,12 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -59,7 +62,7 @@
         <div class="project-header">
             <h1>Crystals of the Soul</h1>
             <br>
-            <p>Gioco di ruolo dungeon crawler a sfondo morale</p>
+            <p data-i18n="crystal.description">Gioco di ruolo dungeon crawler a sfondo morale</p>
         </div>
 
         <div class="project-preview">
@@ -67,18 +70,18 @@
         </div>
 
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="crystal.intro_description0">
                 Crystals of the Soul è un gioco di ruolo a turni con visuale dall'alto in cui il giocatore scende attraverso un dungeon di sei piani (un piano tutorial + 5 piani di gioco effettivo).
             </p> 
-            <p> 
+            <p data-i18n-html="crystal.intro_description1">
                 Ogni incontro offre una scelta morale: uccidere il nemico o risparmiarlo. 
                 Il gioco tiene un conteggio morale progressivo, e questo conteggio determina silenziosamente lo svolgimento della storia.
             </p>
         </div>
 
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <li>Java</li>
                 <li>LibGDX</li>
@@ -88,8 +91,8 @@
         </div>
 
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="crystal.features_list">
                 <li>Dungeon di 6 piani (1 livello tutorial + 5 livelli di gioco)</li>
                 <li>Scelte morali negli incontri (uccidere o risparmiare i nemici)</li>
                 <li>Sviluppo silenzioso della trama in base al conteggio morale</li>
@@ -124,5 +127,7 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

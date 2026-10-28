@@ -50,9 +50,12 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -61,7 +64,7 @@
         <div class="project-header">
             <h1>Library Management</h1>
             <br>
-            <p>Sistema di gestione biblioteca con React e Django</p>
+            <p data-i18n="library.project_subintro">Sistema di gestione biblioteca con React e Django</p>
         </div>
 
         <!-- Video Preview Showcase -->
@@ -74,19 +77,19 @@
 
         <!-- Project Description -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="library.intro_description0">
                 Questo progetto consiste in un sistema completo e intuitivo per la gestione operativa di una biblioteca. 
                 Include flussi per la registrazione di prestiti e restituzioni di libri, la gestione di anagrafiche utenti e il monitoraggio in tempo reale della disponibilità dei volumi a catalogo.
             </p>
-            <p>
+            <p data-i18n-html="library.intro_description1">
                 L'applicazione è stata concepita con un'architettura disaccoppiata (Decoupled Architecture), dove un frontend reattivo interagisce con un server backend RESTful centralizzato tramite chiamate API asincrone sicure.
             </p>
         </div>
 
         <!-- Technologies -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <li>React.js</li>
                 <li>Django REST Framework</li>
@@ -98,8 +101,8 @@
 
         <!-- Features list -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="library.features_list">
                 <li>Gestione e tracciamento prestiti e restituzioni</li>
                 <li>Sistema di autenticazione e autorizzazione utenti</li>
                 <li>Pannello amministrativo (dashboard) di monitoraggio</li>
@@ -111,7 +114,7 @@
 
         <!-- Screenshots Grid -->
         <div class="screenshots" id="screen">
-            <h2>Screenshot Applicazione</h2>
+            <h2>Screenshot</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
                     <img src="../media/library/fullbook.webp" alt="Dettagli libro e scheda catalogo">
@@ -134,5 +137,8 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

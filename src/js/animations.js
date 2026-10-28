@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Typewriter Effect
     const typedTextSpan = document.getElementById('typed-text');
     if (typedTextSpan) {
-        const roles = [
+        const fallbackRoles = [
             "Sviluppatore Software",
             "Web Developer",
             "App Developer",
@@ -43,11 +43,27 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         const typingSpeed = 100;
         const erasingSpeed = 50;
-        const newWordDelay = 2000; // Delay between words
-        
+        const newWordDelay = 2000;
+
+        let roles = (window._i18nTranslations && window._i18nTranslations.hero && window._i18nTranslations.hero.roles)
+            ? window._i18nTranslations.hero.roles
+            : fallbackRoles;
+
         let roleIndex = 0;
         let charIndex = 0;
-        
+        let isTyping = true;
+
+        // Esposto globalmente così i18n.js può aggiornare i roles al cambio lingua
+        window.updateTypewriterRoles = function(translations) {
+            if (translations && translations.hero && translations.hero.roles) {
+                roles = translations.hero.roles;
+                // Resetta al primo ruolo nella nuova lingua
+                typedTextSpan.textContent = '';
+                roleIndex = 0;
+                charIndex = 0;
+            }
+        };
+
         function type() {
             if (charIndex < roles[roleIndex].length) {
                 typedTextSpan.textContent += roles[roleIndex].charAt(charIndex);
@@ -57,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(erase, newWordDelay);
             }
         }
-        
+
         function erase() {
             if (charIndex > 0) {
                 typedTextSpan.textContent = roles[roleIndex].substring(0, charIndex - 1);
@@ -68,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(type, typingSpeed + 50);
             }
         }
-        
+
         // Inizia l'animazione dopo il caricamento
         setTimeout(type, 1000);
     }

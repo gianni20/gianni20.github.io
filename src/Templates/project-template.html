@@ -51,9 +51,12 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -64,7 +67,7 @@
             <h1>Nome Progetto</h1>
             <br>
             <!-- COMPILA: Inserisci una breve descrizione o tipologia (es. App Mobile, Piattaforma Web) -->
-            <p>Tipologia o Sottotitolo Breve del Progetto</p>
+            <p data-i18n="beppe.project_subintro">Tipologia o Sottotitolo Breve del Progetto</p>
         </div>
 
         <!-- 2. ANTEPRIMA PRINCIPALE (Video o Immagine) -->
@@ -83,19 +86,19 @@
 
         <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
             <!-- COMPILA: Scrivi i paragrafi descrittivi del tuo progetto -->
-            <p>
+            <p data-i18n-html="pro.intro_description0">
                 Inserisci qui un paragrafo che descriva gli obiettivi del progetto, il contesto in cui è stato sviluppato (es. progetto scolastico, lavoro personale, hackathon) e il problema che risolve.
             </p>
-            <p>
+            <p data-i18n-html="pro.intro_description1">
                 Puoi aggiungere un secondo paragrafo per approfondire le scelte architetturali, sfide particolari riscontrate o dettagli organizzativi del lavoro.
             </p>
         </div>
 
         <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <!-- COMPILA: Aggiungi o rimuovi le voci della lista in base al tuo stack -->
                 <li>Tecnologia 1</li>
@@ -108,7 +111,7 @@
 
         <!-- 5. CARATTERISTICHE PRINCIPALI (Griglia di punti di forza) -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
             <ul>
                 <!-- COMPILA: Elenca le funzionalità chiave (verranno mostrate con una spunta verde) -->
                 <li>Funzionalità 1 (es. Autenticazione sicura OAuth)</li>
@@ -153,5 +156,7 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

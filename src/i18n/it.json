@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "description": "Portfolio di Giovanni Romano - Sviluppatore Software",
+    "og_description": "Portfolio personale di Giovanni Romano, sviluppatore software."
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Progetti",
+    "skills": "Competenze",
+    "contacts": "Contatti",
+    "toggle_theme": "Cambia tema colore"
+  },
+  "hero": {
+    "greeting": "Ciao, sono",
+    "pronouns": "He/Him",
+    "age_suffix": "anni",
+    "roles": [
+      "Sviluppatore Software",
+      "Web Developer",
+      "App Developer",
+      "Linux Enthusiast",
+      "Home Lab Builder"
+    ]
+  },
+  "bio": {
+    "text": "Sono uno studente appassionato di <strong>programmazione</strong> e <strong>tecnologia</strong>. Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, curando sia la logica del <strong>backend</strong> sia l'esperienza utente nel <strong>frontend</strong>. <br> Mi interessa anche il mondo dell'<strong>intelligenza artificiale</strong>, del design e dell'ottimizzazione del codice. Oltre a sviluppare software, mi piace sperimentare con <strong>server Linux</strong> e trovare modi innovativi per integrare tecnologia e automazione nella vita quotidiana."
+  },
+  "projects": {
+    "section_title": "I Miei Progetti",
+    "more_info": "Maggiori Informazioni"
+  },
+  "skills": {
+    "section_title": "Competenze",
+    "languages_card": "Linguaggi",
+    "tools_card": "Strumenti",
+    "softskills_card": "Soft Skills & Interessi"
+  },
+  "contacts": {
+    "section_title": "Contatti",
+    "description": "Hai in mente un progetto o vuoi fare due chiacchiere? Contattami sui social o via email!"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati."
+  },
+  "pro": {
+    "intro_title": "Il Progetto",
+    "technologies_title": "Tecnologie Utilizzate",
+    "features_title": "Caratteristiche Principali"
+  },
+  "beppe": {
+    "project_subintro": "Sito ufficiale e galleria d'arte digitale del pittore Beppe Romano",
+    "intro_description0": "<strong><a href=\"https://www.bepperomano.eu\" target=\"_blank\" rel=\"noopener noreferrer\">BeppeRomano.eu</a></strong> è il sito web ufficiale e galleria d'arte digitale del pittore Beppe Romano. Il progetto è concepito come una vetrina virtuale che valorizza la lunga carriera artistica dell'artista, iniziata nel 1977. Offre una panoramica completa dei suoi dipinti, delle sue mostre ed esposizioni storiche e delle news relative ai suoi corsi ed eventi in atelier.",
+    "intro_description1": "Per massimizzare le prestazioni e ridurre a zero i costi di manutenzione e complessità delle infrastrutture database, il sito adotta un'architettura <strong>flat-file</strong> sviluppata in PHP nativo. Tutte le informazioni su opere, mostre e news sono gestite tramite file JSON strutturati e un pannello di controllo ad accesso riservato per l'amministratore, integrando la massima sicurezza grazie all'uso di variabili d'ambiente <code>.env</code> e restrizioni via <code>.htaccess</code>.",
+    "features_list": "<li><span><strong>Home &amp; Biografia:</strong> Pagina di benvenuto curata nei minimi dettagli con biografia, note critiche e visione artistica dell'artista.</span></li><li><span><strong>Carosello in Evidenza:</strong> Slideshow dinamico e interattivo che mostra le opere scelte in evidenza direttamente dall'artista.</span></li><li><span><strong>Musica di Sottofondo:</strong> Colonna sonora curata con brani selezionati per creare un'atmosfera unica durante la navigazione.</span></li><li><span><strong>Galleria delle Opere:</strong> Catalogo ordinato cronologicamente con vista lightbox a schermo intero e supporto alla navigazione da tastiera.</span></li><li><span><strong>Gestione Mostre:</strong> Elenco strutturato delle mostre personali e collettive realizzate dal 1981 ad oggi.</span></li><li><span><strong>Sezione News:</strong> Spazio dedicato agli aggiornamenti e alla didattica (es. corsi di pittura ad olio ed eventi in atelier).</span></li><li><span><strong>Pannello di Amministrazione:</strong> Area riservata (<code>zxyanm.php</code>) protetta da password cifrata con Bcrypt per la gestione in tempo reale di opere, carosello, mostre e news.</span></li><li><span><strong>Sicurezza e Protezione:</strong> Configurazione di <code>.htaccess</code> per impedire l'accesso diretto via browser ai file di configurazione ed ai file di dati.</span></li>"
+  },
+  "boston": {
+    "project_subintro": "Progetto di Data Science",
+    "intro_description0": "Il progetto approfondisce l'<strong>analisi esplorativa dei dati</strong> e lo sviluppo di <strong>modelli di regressione</strong> per stimare il valore delle abitazioni di Boston, utilizzando il classico <strong>Boston Housing Dataset</strong>.",
+    "intro_description1": "Include inoltre uno studio sul comportamento dei <strong>modelli polinomiali</strong> nei contesti di interpolazione ed estrapolazione, con particolare attenzione alla <strong>cross-validazione</strong>.",
+    "features_list": "<li><strong>Analisi esplorativa dei dati (EDA)</strong> con mappe di correlazione</li><li><strong>Modelli di regressione</strong> lineare e non lineare (polinomiale)</li><li>Studio di <strong>overfitting</strong> e cross-validazione sui gradi del modello</li><li><strong>Visualizzazione 2D e 3D</strong> delle stime di prezzo</li><li>Predizione dei valori con <strong>scikit-learn</strong></li>"
+  },
+  "cash": {
+    "project_subintro": "E-wallet Web Application",
+    "intro_description0": "<strong>Cash Hive</strong> è un'applicazione web e-wallet che simula la gestione delle finanze personali in modo sicuro e interattivo. Consente di monitorare i conti correnti, organizzare i risparmi e inviare denaro istantaneamente.",
+    "intro_description1": "Sviluppata con un'architettura Enterprise basata su <strong>Jakarta EE</strong> e un frontend guidato da <strong>PrimeFaces</strong>, l'applicazione integra elevati standard di sicurezza, come l'autenticazione a due fattori (2FA) e crittografia per la protezione delle transazioni memorizzate nel database <strong>PostgreSQL</strong>.",
+    "features_list": "<li><strong>Registrazione sicura</strong> ed estratti conto in tempo reale</li><li><strong>Autenticazione a due fattori (2FA)</strong> con Google Authenticator</li><li>Simulazione di <strong>depositi, prelievi e trasferimenti</strong></li><li><strong>Salvadanaio virtuale</strong> per obiettivi di risparmio</li><li>Gestione di contatti, reti di amicizia e <strong>budget mensili</strong></li>"
+  },
+  "crystal": {
+    "description": "Gioco di ruolo dungeon crawler a sfondo morale",
+    "intro_description0": "<strong>Crystals of the Soul</strong> è un gioco di ruolo a turni con visuale dall'alto: il giocatore esplora un dungeon di sei piani, composto da un livello tutorial e cinque livelli di gioco.",
+    "intro_description1": "A ogni incontro si presenta una <strong>scelta morale</strong>: affrontare il nemico o risparmiarlo. Il gioco tiene traccia delle decisioni e usa questo conteggio per determinare in modo discreto lo sviluppo della storia.",
+    "features_list": "<li><strong>Dungeon di sei piani</strong>, con un livello tutorial e cinque livelli di gioco</li><li><strong>Scelte morali</strong> durante gli incontri: affrontare o risparmiare i nemici</li><li>Sviluppo della trama determinato dal <strong>conteggio morale</strong></li><li><strong>Combattimento strategico a turni</strong></li><li><strong>Visuale dall'alto</strong> ed esplorazione 2D</li>"
+  },
+  "itet": {
+    "project_subintro": "App vetrina Android / iOS / Web",
+    "intro_description0": "<strong>Itet Orienta</strong> è un'applicazione vetrina cross-platform che presenta l'Istituto Tecnico Economico e Tecnologico \"G. Garibaldi\" di Marsala. Aiuta le famiglie e gli studenti delle scuole secondarie di primo grado a scegliere il percorso di studi superiore e a orientarsi nella scelta scolastica.",
+    "intro_description1": "Il progetto è stato sviluppato e presentato in occasione del progetto PON \"Sviluppo Creativo\", svoltosi all'interno dell'istituto stesso.",
+    "features_list": "<li><strong>Accesso libero</strong>, senza autenticazione obbligatoria</li><li>Informazioni organizzate per <strong>indirizzo di studio</strong></li><li>Collegamenti diretti per chiamare o inviare email alla <strong>segreteria</strong></li><li><strong>Interfaccia ottimizzata per dispositivi mobili</strong></li>"
+  },
+  "library": {
+    "project_subintro": "Sistema di gestione biblioteca con React e Django",
+    "intro_description0": "Un sistema completo per la <strong>gestione operativa di una biblioteca</strong>: registra prestiti e restituzioni, gestisce le anagrafiche degli utenti e monitora in tempo reale la disponibilità dei libri a catalogo.",
+    "intro_description1": "L'applicazione adotta un'<strong>architettura disaccoppiata</strong>: un frontend reattivo comunica con un backend RESTful centralizzato tramite chiamate API asincrone e sicure.",
+    "features_list": "<li>Registrazione e monitoraggio di <strong>prestiti e restituzioni</strong></li><li><strong>Autenticazione e autorizzazione</strong> degli utenti</li><li><strong>Dashboard amministrativa</strong> per il monitoraggio</li><li>Ricerca avanzata per <strong>titolo, autore e genere</strong></li><li>Notifiche automatiche per <strong>ritardi nelle consegne</strong></li><li>Profilo personale con <strong>storico delle attività</strong></li>"
+  },
+  "victoria": {
+    "project_subintro": "Sito Web presentazione progetto",
+    "intro_description0": "Il progetto ha seguito il <strong>monitoraggio civico</strong> del rinnovamento urbano di Piazza della Vittoria a Marsala, con un'analisi dell'efficienza e dell'utilizzo dei fondi europei stanziati per l'opera.",
+    "intro_description1": "Ho progettato e realizzato un sito vetrina per presentare l'iniziativa e rendere la consultazione dei dati e delle analisi <strong>interattiva e coinvolgente</strong> per la giuria del concorso nazionale \"A Scuola di OpenCoesione\".",
+    "features_list": "<li>Homepage con una <strong>sintesi dei punti chiave</strong> del progetto</li><li>Design <strong>leggero, leggibile e accessibile</strong></li><li>Descrizione delle fasi del <strong>monitoraggio civico</strong></li><li>Modulo di contatto per raccogliere <strong>feedback civici</strong></li>"
+  }
+}

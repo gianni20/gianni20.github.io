@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "description": "Giovanni Romano's Portfolio - Software Developer",
+    "og_description": "Personal portfolio of Giovanni Romano, software developer."
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contacts": "Contact",
+    "toggle_theme": "Toggle color theme"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "pronouns": "He/Him",
+    "age_suffix": "years old",
+    "roles": [
+      "Software Developer",
+      "Web Developer",
+      "App Developer",
+      "Linux Enthusiast",
+      "Home Lab Builder"
+    ]
+  },
+  "bio": {
+    "text": "I'm a student passionate about <strong>programming</strong> and <strong>technology</strong>. I enjoy exploring different languages and frameworks, working on projects ranging from web development to app development. I love the idea of building practical and functional solutions, taking care of both the <strong>backend</strong> logic and the <strong>frontend</strong> user experience. <br> I'm also interested in <strong>artificial intelligence</strong>, design, and code optimization. Besides developing software, I enjoy experimenting with <strong>Linux servers</strong> and finding innovative ways to integrate technology and automation into everyday life."
+  },
+  "projects": {
+    "section_title": "My Projects",
+    "more_info": "Learn More"
+  },
+  "skills": {
+    "section_title": "Skills",
+    "languages_card": "Languages",
+    "tools_card": "Tools",
+    "softskills_card": "Soft Skills & Interests"
+  },
+  "contacts": {
+    "section_title": "Contact",
+    "description": "Have a project in mind or just want to chat? Reach me on social media or via email!"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "pro": {
+    "intro_title": "The Project",
+    "technologies_title": "Technologies Used",
+    "features_title": "Main Features"
+  },
+  "beppe": {
+    "project_subintro": "Official website and digital art gallery of the painter Beppe Romano",
+    "intro_description0": "<strong><a href=\"https://www.bepperomano.eu\" target=\"_blank\" rel=\"noopener noreferrer\">BeppeRomano.eu</a></strong> is the official website and digital art gallery of the painter Beppe Romano. The project is conceived as a virtual showcase that highlights the artist's long artistic career, which began in 1977. It offers a complete overview of his paintings, his historical exhibitions and displays, and news about his courses and studio events.",
+    "intro_description1": "To maximize performance and reduce maintenance costs and database infrastructure complexity to zero, the site adopts a <strong>flat-file</strong> architecture developed in native PHP. All information on works, exhibitions, and news is managed via structured JSON files and a dedicated control panel. Restricted access for the administrator, integrating maximum security thanks to the use of <code>.env</code> environment variables and restrictions via <code>.htaccess</code>.",
+    "features_list": "<li><span><strong>Home & Biography:</strong> Welcome page curated down to the smallest details with biography, critical notes and artistic vision of the artist.</span></li><li><span><strong>Featured Carousel:</strong> Dynamic and interactive slideshow showing the works highlighted directly by the artist.</span></li><li><span><strong>Background Music:</strong> Curated soundtrack with selected songs to create a unique atmosphere while browsing.</span></li><li><span><strong>Gallery of Works:</strong> Chronologically arranged catalog with full-screen lightbox view and keyboard navigation support.</span></li><li><span><strong>Exhibition Management:</strong> Structured list of solo and group exhibitions organized by the 1981 to today.</span></li><li><span><strong>News Section:</strong> Space dedicated to updates and teaching (e.g. oil painting courses and atelier events).</span></li><li><span><strong>Administration Panel:</strong> Reserved area (<code>zxyanm.php</code>) protected by a Bcrypt encrypted password for real-time management of works, carousel, exhibitions, and news.</span></li><li><span><strong>Security and Protection:</strong> <code>.htaccess</code> configuration to prevent direct browser access to configuration and data files.</span></li>"
+  },
+  "boston": {
+    "project_subintro": "Data Science Project",
+    "intro_description0": "The project delves into <strong>exploratory data analysis</strong> and the development of <strong>regression models</strong> to estimate the value of Boston housing, using the classic <strong>Boston Housing Dataset</strong>.",
+    "intro_description1": "It also includes a study of the behavior of <strong>polynomial models</strong> in the context of interpolation and extrapolation, with particular attention to <strong>cross-validation</strong>.",
+    "features_list": "<li><strong>Exploratory Data Analysis (EDA)</strong> with correlation maps</li><li><strong>Linear and nonlinear (polynomial) regression models</li><li>Overfitting and cross-validation study on model degrees</li><li><strong>2D and 3D visualization</strong> of price estimates</li><li>Prediction of values ​​with <strong>scikit-learn</strong></li>"
+  },
+  "cash": {
+    "project_subintro": "E-wallet Web Application",
+    "intro_description0": "<strong>Cash Hive</strong> is a web e-wallet application that simulates personal finance management in a secure and interactive way. It allows you to monitor your current accounts, organize your savings, and send money instantly.",
+    "intro_description1": "Developed with an Enterprise architecture based on <strong>Jakarta EE</strong> and a front end powered by <strong>PrimeFaces</strong>, the application integrates high security standards, such as two-factor authentication (2FA) and encryption to protect transactions stored in the <strong>PostgreSQL</strong> database.",
+    "features_list": "<li><strong>Secure registration</strong> and real-time account statements</li><li><strong>Two-factor authentication (2FA)</strong> with Google Authenticator</li><li>Simulation of <strong>deposits, withdrawals, and transfers</strong></li><li><strong>Virtual piggy bank</strong> for savings goals</li><li>Manage contacts, networks, friendship and <strong>monthly budget</strong></li>"
+  },
+    "crystal": {
+    "description": "Moral-themed dungeon crawler RPG",
+    "intro_description0": "<strong>Crystals of the Soul</strong> is a turn-based, top-down RPG: the player explores a six-story dungeon, consisting of a tutorial level and five game levels.",
+    "intro_description1": "Each encounter presents a <strong>moral choice</strong>: face the enemy or spare him. The game tracks your decisions and uses this count to discreetly determine the story's progression.",
+    "features_list": "<li><strong>Six-story dungeon</strong>, with a tutorial level and five game levels</li><li><strong>Moral choices</strong> during encounters: confront or spare enemies</li><li>Plot development determined by the <strong>moral count</strong></li><li><strong>Turn-based strategic combat</strong></li><li><strong>Top-down view</strong> and 2D exploration</li>"
+  },
+  "itet": {
+    "project_subintro": "Android / iOS / Web Showcase App",
+    "intro_description0": "<strong>Itet Orienta</strong> is a cross-platform showcase application that presents the \"G. Garibaldi\" Technical Economic and Technological Institute in Marsala. It helps families and middle school students choose their higher education path and guide their school choices.",
+    "intro_description1": "The project was developed and presented during the PON \"Creative Development\" project, which took place within the institution itself.",
+    "features_list": "<li><strong>Free access</strong>, without mandatory authentication</li><li>Information organized by <strong>course of study</strong></li><li>Direct links to call or email the <strong>secretariat</strong></li><li><strong>Interface optimized for mobile devices</strong></li>"
+  },
+  "library": {
+    "project_subintro": "Library management system with React and Django",
+    "intro_description0": "A complete system for the <strong>operational management of a library</strong>: records loans and returns, manages user records, and monitors the Availability of books in the catalog.",
+    "intro_description1": "The application adopts a <strong>decoupled architecture</strong>: a responsive frontend communicates with a centralized RESTful backend via asynchronous and secure API calls.",
+    "features_list": "<li>Loan and return registration and tracking</strong></li><li><strong>User authentication and authorization</strong></li><li><strong>Administrative dashboard</strong> for monitoring</li><li>Advanced search by <strong>title, author, and genre</strong></li><li>Automatic notifications for <strong>delivery delays</strong></li><li>Personal profile with <strong>activity history</strong></li>"
+  },
+  "victoria": {
+    "project_subintro": "Project presentation website",
+    "intro_description0": "The project followed the <strong>civic monitoring</strong> of the urban renewal of Piazza della Vittoria in Marsala, with an analysis of the efficiency and use of European funds allocated for the project.",
+    "intro_description1": "I designed and created a showcase website to present the initiative and make the consultation of data and analyses <strong>interactive and engaging</strong> for the jury of the national competition \"A Scuola di OpenCoesione\".",
+    "features_list": "<li>Homepage with a <strong>summary of the project's key points</strong> <li>Light, readable, and accessible design</strong></li><li>Description of the <strong>civic monitoring phases</strong></li><li>Contact form to collect <strong>civic feedback</strong></li>"
+  }
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio di Giovanni Romano - Sviluppatore Software">
     <meta name="keywords" content="sviluppatore, software, web development, frontend, backend, Python, JavaScript, Flutter, React, Linux, Windows, GitHub, portfolio, Giovanni Romano">
+    <link rel="alternate" hreflang="it" href="https://gianni20.github.io/">
+    <link rel="alternate" hreflang="en" href="https://gianni20.github.io/">
     <meta name="author" content="Giovanni Romano">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -51,14 +53,17 @@
                 <a href="#home">GR</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#progetti">Progetti</a></li>
-                <li><a href="#skills">Competenze</a></li>
-                <li><a href="#contatti">Contatti</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#progetti" data-i18n="nav.projects">Progetti</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Competenze</a></li>
+                <li><a href="#contatti" data-i18n="nav.contacts">Contatti</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -69,9 +74,9 @@
                 <!-- Profile Left: Bio Details & Introduction -->
                 <div class="profile-header">
                     <div class="profile-info">
-                        <p class="hero-subtitle">Ciao, sono</p>
+                        <p class="hero-subtitle" data-i18n="hero.greeting">Ciao, sono</p>
                         <h1>Giovanni Romano</h1>
-                        <p class="hero-pronouns">He/Him — <span><script>document.write(new Date().getFullYear() - 2005);</script> anni</span></p>
+                        <p class="hero-pronouns">He/Him — <span><script>document.write(new Date().getFullYear() - 2005);</script> <span data-i18n="hero.age_suffix">anni</span></span></p>
                         
                         <!-- Typing animation text container -->
                         <div class="title-container">
@@ -101,7 +106,7 @@
 
                 <!-- Extended Bio Box spanning full width -->
                 <div class="bio-container">
-                    <p class="bio">
+                    <p class="bio" data-i18n-html="bio.text">
                         Sono uno studente appassionato di <strong>programmazione</strong> e <strong>tecnologia</strong>. 
                         Mi piace esplorare diversi linguaggi e framework, lavorando su progetti che spaziano dal web development all'app development. 
                         Mi entusiasma l'idea di creare soluzioni pratiche e funzionali, curando sia la logica del <strong>backend</strong> sia l'esperienza utente nel <strong>frontend</strong>. 
@@ -114,7 +119,7 @@
 
         <!-- Projects Showcase Section -->
         <section id="progetti">
-            <h2 class="reveal">I Miei Progetti</h2>
+            <h2 class="reveal" data-i18n="projects.section_title">I Miei Progetti</h2>
             <div class="progetti-grid reveal">
                 
                 <!-- Project: BeppeRomano.eu -->
@@ -129,7 +134,7 @@
                         <span>Tailwind CSS</span>
                         <span>Flat-File DB</span>
                     </div>
-                    <a href="src/beppe.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/beppe.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
                 
                 <!-- Project: Library Management -->
@@ -144,7 +149,7 @@
                         <span>PostgreSQL</span>
                         <span>Bootstrap</span>
                     </div>
-                    <a href="src/library.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/library.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
                 <!-- Project: Itet Orienta -->
@@ -159,7 +164,7 @@
                         <span>Firebase</span>
                         <span>Android Studio</span>
                     </div>
-                    <a href="src/itet.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/itet.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
                 <!-- Project: Victoria Team -->
@@ -173,7 +178,7 @@
                         <span>Google Sites</span>
                         <span>Web Design</span>
                     </div>
-                    <a href="src/victoria.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/victoria.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
                 <!-- Project: Crystals of the Soul -->
@@ -188,7 +193,7 @@
                         <span>Gradle</span>
                         <span>Tiled</span>
                     </div>
-                    <a href="src/Crystal.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/Crystal.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
                 <!-- Project: Bostonshouse -->
@@ -203,7 +208,7 @@
                         <span>pandas</span>
                         <span>scikit-learn</span>
                     </div>
-                    <a href="src/boston.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/boston.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
                 <!-- Project: Cash Hive -->
@@ -218,7 +223,7 @@
                         <span>PostgreSQL</span>
                         <span>E-wallet</span>
                     </div>
-                    <a href="src/cash.html" class="info-btn">Maggiori Informazioni</a>
+                    <a href="src/cash.html" class="info-btn" data-i18n="projects.more_info">Maggiori Informazioni</a>
                 </div>
 
             </div>
@@ -226,7 +231,7 @@
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2 class="reveal">Competenze</h2>
+            <h2 class="reveal" data-i18n="skills.section_title">Competenze</h2>
             <div class="skills-container reveal">
                 <!-- Card: Frontend -->
                 <div class="skill-card">
@@ -270,7 +275,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-code" aria-hidden="true"></i>
                         </div>
-                        <h3>Linguaggi</h3>
+                        <h3 data-i18n="skills.languages_card">Linguaggi</h3>
                     </div>
                     <div class="skill-tags">
                         <span>Python</span>
@@ -289,7 +294,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-tools" aria-hidden="true"></i>
                         </div>
-                        <h3>Strumenti</h3>
+                        <h3 data-i18n="skills.tools_card">Strumenti</h3>
                     </div>
                     <div class="skill-tags">
                         <span>Git & GitHub</span>
@@ -306,7 +311,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-brain" aria-hidden="true"></i>
                         </div>
-                        <h3>Soft Skills & Interessi</h3>
+                        <h3 data-i18n="skills.softskills_card">Soft Skills & Interessi</h3>
                     </div>
                     <div class="skill-tags">
                         <span>Problem Solving</span>
@@ -325,10 +330,10 @@
 
         <!-- Contacts Section -->
         <section id="contatti">
-            <h2 class="reveal">Contatti</h2>
+            <h2 class="reveal" data-i18n="contacts.section_title">Contatti</h2>
             <div class="contacts-container reveal">
                 <div class="contact-info">
-                    <p>Hai in mente un progetto o vuoi fare due chiacchiere? Contattami sui social o via email!</p>
+                    <p data-i18n="contacts.description">Hai in mente un progetto o vuoi fare due chiacchiere? Contattami sui social o via email!</p>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/gianni20" class="social-link github" target="_blank" rel="noopener noreferrer">
@@ -362,11 +367,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> Giovanni Romano. Tutti i diritti riservati.</p>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Giovanni Romano. <span data-i18n="footer.rights">Tutti i diritti riservati.</span></p>
     </footer>
 
     <!-- Scripts -->
     <script src="src/js/theme.js"></script>
+    <script src="src/js/i18n.js"></script>
     <script src="src/js/carousel.js"></script>
     <script src="src/js/animations.js"></script>
 </body>

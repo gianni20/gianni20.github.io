@@ -50,39 +50,39 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main class="project-details">
-        <!-- 1. INTESTAZIONE DEL PROGETTO -->
         <div class="project-header">
             <h1>Cash Hive</h1>
             <br>
             <p>E-wallet Web Application</p>
         </div>
 
-        <!-- 2. ANTEPRIMA PRINCIPALE -->
         <div class="project-preview">
             <img src="../media/cashhive/0.webp" alt="Anteprima Dashboard Cash Hive">
         </div>
 
-        <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="cash.intro_description0">
                 Cash Hive è un'applicazione web e-wallet completa, progettata per simulare la gestione delle finanze personali in modo sicuro e interattivo. L'applicazione consente agli utenti di monitorare i propri conti correnti, organizzare risparmi e inviare denaro in modo istantaneo.
             </p>
-            <p>
+            <p data-i18n-html="cash.intro_description1">
                 Sviluppata con un'architettura Enterprise basata su <strong>Jakarta EE</strong> e un frontend guidato da <strong>PrimeFaces</strong>, l'applicazione integra elevati standard di sicurezza, come l'autenticazione a due fattori (2FA) e crittografia per la protezione delle transazioni memorizzate nel database <strong>PostgreSQL</strong>.
             </p>
         </div>
 
         <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <li>Jakarta EE</li>
                 <li>PrimeFaces</li>
@@ -94,8 +94,8 @@
 
         <!-- 5. CARATTERISTICHE PRINCIPALI -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="cash.features_list">
                 <li>Registrazione sicura ed estratti conto in tempo reale</li>
                 <li>Autenticazione a due fattori (2FA) con Google Authenticator</li>
                 <li>Simulazione di deposito, prelievo e trasferimento fondi</li>
@@ -159,5 +159,9 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

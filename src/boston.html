@@ -19,7 +19,6 @@
     <meta property="twitter:description" content="Studio di machine learning in Python per la predizione dei prezzi delle case a Boston con pandas e scikit-learn.">
     <meta property="twitter:image" content="https://gianni20.github.io/media/boston/non%20lineare2.webp">
 
-    <!-- COMPILA: Cambia il titolo della pagina inserendo il nome del tuo progetto -->
     <title>Bostonshouse - Giovanni Romano</title>
     
     <link rel="icon" type="image/png" href="../media/favicon.ico">
@@ -50,40 +49,39 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main class="project-details">
-        <!-- 1. INTESTAZIONE DEL PROGETTO -->
         <div class="project-header">
             <h1>Bostonshouse</h1>
             <br>
-            <p>Progetto di Data Science</p>
+            <p data-i18n="boston.project_subintro">Progetto di Data Science</p>
         </div>
 
         <div class="project-preview">
             <img src="../media/boston/non lineare2.webp" alt="Anteprima del progetto">
         </div>
 
-        <!-- 3. INTRODUZIONE / DESCRIZIONE ESTESA -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="boston.intro_description0">
                 Questo progetto è focalizzato sull'analisi esplorativa dei dati e sullo sviluppo di modelli di regressione per la predizione del valore delle abitazioni di Boston, utilizzando il classico Boston Housing Dataset.
             </p>
-            <p>
+            <p data-i18n-html="boston.intro_description1">
                 Il progetto include anche uno studio approfondito sul comportamento dei modelli polinomiali in contesti di interpolazione ed estrapolazione tramite cross-validazione.
             </p>
         </div>
 
-        <!-- 4. TECNOLOGIE UTILIZZATE (Badge) -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
-                <!-- COMPILA: Aggiungi o rimuovi le voci della lista in base al tuo stack -->
                 <li>Python</li>
                 <li>Jupyter Notebook</li>
                 <li>pandas</li>
@@ -96,8 +94,8 @@
 
         <!-- 5. CARATTERISTICHE PRINCIPALI -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="boston.features_list">
                 <li>Analisi Esplorativa dei Dati (EDA) con mappe di correlazione</li>
                 <li>Modelli di regressione lineare e non lineare (polinomiale)</li>
                 <li>Studio di overfitting e cross-validazione sui gradi del modello</li>
@@ -132,5 +130,9 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

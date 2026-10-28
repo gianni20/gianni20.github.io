@@ -50,9 +50,12 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -61,7 +64,7 @@
         <div class="project-header">
             <h1>Itet Orienta</h1>
             <br>
-            <p>App vetrina Android / iOS / Web</p>
+            <p data-i18n="itet.project_subintro">App vetrina Android / iOS / Web</p>
         </div>
 
         <!-- Video Preview Showcase -->
@@ -74,19 +77,19 @@
 
         <!-- Project Description -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="itet.intro_description0">
                 Itet Orienta è un'applicazione vetrina cross-platform progettata per promuovere e presentare l'Istituto Tecnico Economico e Tecnologico "G. Garibaldi" di Marsala. 
                 L'obiettivo primario dell'app è quello di guidare le famiglie e gli studenti delle scuole secondarie di primo grado nella scelta del percorso di studi superiore, facilitando l'orientamento scolastico.
             </p>
-            <p>
+            <p data-i18n-html="itet.intro_description1">
                 Il progetto è stato sviluppato e presentato in occasione del progetto PON "Sviluppo Creativo", svoltosi all'interno dell'istituto stesso.
             </p>
         </div>
 
         <!-- Technologies -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <li>Flutter Framework</li>
                 <li>Dart Programming Language</li>
@@ -98,8 +101,8 @@
 
         <!-- Features list -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="itet.features_list">
                 <li>Accesso libero e senza autenticazione obbligatoria</li>
                 <li>Sezioni informative strutturate per indirizzi di studio</li>
                 <li>Integrazione diretta per chiamate telefoniche e email di segreteria</li>
@@ -109,7 +112,7 @@
 
         <!-- Screenshots Grid -->
         <div class="screenshots" id="screen">
-            <h2>Screenshot Applicazione</h2>
+            <h2>Screenshot</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
                     <img src="../media/itet/HOMEitetshort.webp" alt="Homepage ITET Orienta">
@@ -135,5 +138,7 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

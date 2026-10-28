@@ -50,9 +50,12 @@
                 <li><a href="#screen">Screenshots</a></li>
                 <li><a href="#links">Links</a></li>
             </ul>
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Cambia tema colore">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+                <button onclick="toggleTheme()" class="theme-toggle" data-i18n-aria="nav.toggle_theme" aria-label="Cambia tema colore">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -61,7 +64,7 @@
         <div class="project-header">
             <h1>Victoria Team</h1>
             <br>
-            <p>Sito Web presentazione progetto</p>
+            <p data-i18n="victoria.project_subintro">Sito Web presentazione progetto</p>
         </div>
 
         <!-- Image Preview Showcase -->
@@ -71,18 +74,18 @@
 
         <!-- Project Description -->
         <div class="project-description" id="intro">
-            <h2>Il Progetto</h2>
-            <p>
+            <h2 data-i18n="pro.intro_title">Il Progetto</h2>
+            <p data-i18n-html="victoria.intro_description0">
                 Il progetto consisteva nel monitoraggio civico del rinnovamento urbano di Piazza della Vittoria a Marsala, analizzando in particolare l'efficienza e le modalità di utilizzo dei fondi europei stanziati per l'opera.
             </p>
-            <p>
+            <p data-i18n-html="victoria.intro_description1">
                 Sono stato incaricato di progettare e realizzare un sito web vetrina dedicato alla presentazione dell'iniziativa, per rendere la consultazione dei dati e delle analisi interattiva e d'impatto per la giuria del concorso nazionale "A Scuola di OpenCoesione".
             </p>
         </div>
 
         <!-- Technologies -->
         <div class="technologies" id="tec">
-            <h2>Tecnologie Utilizzate</h2>
+            <h2 data-i18n="pro.technologies_title">Tecnologie Utilizzate</h2>
             <ul>
                 <li>Google Sites</li>
                 <li>Monithon Platform</li>
@@ -93,8 +96,8 @@
 
         <!-- Features list -->
         <div class="features" id="sum">
-            <h2>Caratteristiche Principali</h2>
-            <ul>
+            <h2 data-i18n="pro.features_title">Caratteristiche Principali</h2>
+            <ul data-i18n-html="victoria.features_list">
                 <li>Homepage riassuntiva dei punti chiave del progetto</li>
                 <li>Design leggero, leggibile e accessibile</li>
                 <li>Descrizione dettagliata di tutte le fasi del monitoraggio</li>
@@ -127,5 +130,7 @@
     </main>
 
     <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
